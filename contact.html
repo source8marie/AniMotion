@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
 
 
+    
 </head>
 
 <body>
@@ -25,32 +26,43 @@
         <i class="fa-solid fa-circle-up"></i>
     </button>
 
-    <!-- header starts -->
-    <header>
+    <!--header starts-->
+    <header class="head">
         <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
-
+    
         <a href="#" class="logo">
             <img src="img/animotionhdr1.png" alt="T&T's AniMotion Logo">
         </a>
-
+    
         <nav class="navbar" id="navbar">
-            <a href="index.html">Home<span></span></a>
+            <a href="index.html" >Home<span></span></a>
             <a href="series.html">Series<span></span></a>
             <a href="movies.html">Movies<span></span></a>
             <a href="contact.html"style="color:#ff1ef6">Contact Us <span class="on"></span></a>
-            <span>
+            
+            <div class="search-container">
                 <input type="text" placeholder="Search.." class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <!-- Account button with icon -->
-            <a href="account.html" class="account-btn">
-                <i class="bi bi-person-circle" style="font-size: 3rem; margin-top: 5px; position: relative; top: 3px;"></i>
-            </a>  
+            </div>
+    
+            <!-- Account button with hover dropdown (No link now) -->
+            <div class="account-container">
+                <a class="account-btn">
+                    <i class="bi bi-person-circle"></i>
+                </a>
+                <div class="account-dropdown">
+                    <a href="account.html">Account</a>
+                    <div class="divider"></div> <!-- Divider line -->
+                    <a href="index-login.html">Log Out</a>
+                </div>
+            </div>
+            
+            <!-- Dark mode toggle -->
+            <div class="darkmode-toggle">
+                <i onclick="tog()" class="bi bi-brightness-high-fill" id="icon"></i>
+            </div>
         </nav>
-        <div class="icons">
-            <i onclick="tog()" class="bi bi-brightness-high-fill" id="icon"></i>
-        </div>
     </header>
 
 

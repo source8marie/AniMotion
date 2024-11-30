@@ -4,8 +4,8 @@
 .logo img {
     width: auto;         
     height: 80px;        
+    margin-top: 19px;
 }
-
 
 :root {
     --drk_bdy_color: #424670;
@@ -108,6 +108,11 @@ header {
     box-shadow: 0 .5rem 1rem rgba(250, 235, 235, 0.1);
     background: var(--body_color);
     transition: top 0.3s;
+}
+
+header.head {
+    height: 80px; 
+    line-height: 60px; 
 }
 
 .head .hidden {
@@ -274,6 +279,106 @@ h5 .text-xl {
 
 .text-xl p {
     font-size: 1.5rem;
+}
+
+/* Ensure navbar is displayed as flex */
+.navbar {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space between items */
+    width: 100%;
+}
+
+/* Move all the elements to the right side */
+.navbar .search-container,
+.navbar .account-container,
+.navbar .darkmode-toggle {
+    margin-left: auto; /* This ensures all elements go to the right */
+}
+
+/* Container for the search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust space between the search bar and account icon */
+}
+
+.search {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+/* Container for the account icon and dropdown */
+.account-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically align the account icon */
+    margin-left: 20px; /* Space between the search bar and account icon */
+    padding: 5px; /* Increase the hoverable area for the icon */
+}
+
+/* Dark mode toggle positioning */
+.darkmode-toggle {
+    margin-left: 20px; /* Space between account icon and dark mode toggle */
+    display: flex;
+    align-items: center; /* Vertically align the toggle icon */
+}
+
+/* Hide the dropdown menu by default */
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;  /* Position directly below the icon */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    width: 120px; /* Sufficient width for links */
+    padding: 5px 0; /* Padding around the dropdown links */
+}
+
+/* Style for the dropdown links */
+.account-dropdown a {
+    display: block;
+    padding: 10px 15px; /* Increase clickable area */
+    text-decoration: none;
+    color: #444; /* Default dark gray for both light and dark mode */
+    font-size: 0.8rem; /* Font size for the dropdown links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change background color and make the font purple when hovering over the dropdown links */
+.account-dropdown a:hover {
+    background-color: #f1f1f1; /* Light background when hovering */
+    color: #9b4dff; /* Purple color for hover state */
+}
+
+/* Divider styling */
+.account-dropdown .divider {
+    height: 1px; /* Line thickness */
+    background-color: #ddd; /* Light gray color for the divider */
+    margin: 5px 0; /* Spacing around the line */
+    width: 100%; /* Full width of the dropdown */
+}
+
+/* Show the dropdown menu when hovering over the account container */
+.account-container:hover .account-dropdown {
+    display: block;
+}
+
+/* Style for the account icon */
+.account-btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px; /* Increase the clickable area for the icon */
+}
+
+/* Style for the dark mode toggle icon */
+#icon {
+    font-size: 2rem; /* Adjust the size of the dark mode icon */
+    cursor: pointer;
 }
 
 .slider .slide_cont {
