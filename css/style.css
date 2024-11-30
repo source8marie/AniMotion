@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300&display=swap');
 
 
+.logo img {
+    width: auto;         
+    height: 80px;        
+}
+
+
 :root {
     --drk_bdy_color: #424670;
     --orange: #470044;
