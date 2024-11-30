@@ -27,7 +27,12 @@ if (!storedTheme) {
   localStorage.setItem('icon', 'moon');
 } else {
   // Apply the user's stored preference
-  body.classList.add(storedTheme);
+  if (storedTheme === 'dark') {
+    body.classList.add('dark_theme');
+  } else {
+    body.classList.remove('dark_theme');
+  }
+  
 
   if (storedIcon === 'moon') {
     icon.classList.add('bi-moon-fill');
