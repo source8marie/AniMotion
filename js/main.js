@@ -42,6 +42,16 @@ if (!storedTheme) {
   }
 }
 
+function toggleDescription(button) {
+  const description = button.previousElementSibling; // The <p> element before the button
+  if (description.classList.contains('expanded')) {
+      description.classList.remove('expanded');
+      button.textContent = 'Read More';
+  } else {
+      description.classList.add('expanded');
+      button.textContent = 'Read Less';
+  }
+}
 
 //slider
 

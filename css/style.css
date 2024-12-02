@@ -547,31 +547,18 @@ h5 .text-xl {
 
 .content .head_content {
     display: flex;
-    flex-wrap: wrap;
-    margin: 3rem 2rem;
     gap: 1.5rem;
+    margin: 3rem 2rem;
+    align-items: flex-start; /* Align items to the top */
 }
 
 .content .head_content .img {
-    flex: 1 1 20rem;
-    width: 5rem;
+    flex: 1 1 40rem;
+    width: 25rem; 
     height: 24rem;
     position: relative;
     box-shadow: var(--shadow);
     cursor: pointer;
-}
-
-.content .head_content .img::after {
-    content: 'New Series';
-    font-family: 'Poppins';
-    position: absolute;
-    font-size: .5rem;
-    color: #fff;
-    background: var(--orange);
-    padding: .4rem .5rem;
-    border-radius: .4rem;
-    right: 13px;
-    bottom: 9px;
 }
 
 .content .head_content .img img {
@@ -581,22 +568,46 @@ h5 .text-xl {
     border-radius: .5rem;
 }
 
+.content .head_content .text {
+    flex: 2 1 40rem; /* Reserve more space for text */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the top */
+}
+
 .content .head_content a {
     font-family: 'Poppins';
-    margin-top: 2rem;
-    flex: 1 1 20rem;
     font-size: 2.5rem;
     line-height: 4rem;
     color: var(--primary_color);
+    margin-bottom: 1rem; /* Add spacing below title */
 }
 
-.content .head_content img:hover {
-    border: .2rem solid var(--orange);
+.content .head_content .description {
+    font-size: 0.9rem;
+    color: var(--primary_color);
+    line-height: 1.6;
+    text-align: justify;
+    overflow: hidden; 
+    max-height: 6rem; 
+    transition: max-height 0.3s ease-in-out;
+    text-transform: none; 
 }
 
-.content .head_content a:hover {
+.content .head_content .description.expanded {
+    max-height: none; 
+}
+
+.content .head_content .read-more {
+    font-size: 0.8rem;
     color: var(--orange);
+    cursor: pointer;
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    align-self: flex-start; 
 }
+
+
 
 .box_container {
     display: flex;
