@@ -280,19 +280,19 @@ h5 .text-xl {
     font-size: 1.5rem;
 }
 
-/* Ensure navbar is displayed as flex */
+
 .navbar {
     display: flex;
-    align-items: center; /* Vertically center the items */
-    justify-content: space-between; /* Space between items */
+    align-items: center; 
+    justify-content: space-between;
     width: 100%;
 }
 
-/* Move all the elements to the right side */
+
 .navbar .search-container,
 .navbar .account-container,
 .navbar .darkmode-toggle {
-    margin-left: auto; /* This ensures all elements go to the right */
+    margin-left: auto; 
 }
 
 /* Container for the search bar */
@@ -311,55 +311,62 @@ h5 .text-xl {
 .account-container {
     position: relative;
     display: flex;
-    align-items: center; /* Vertically align the account icon */
-    margin-left: 20px; /* Space between the search bar and account icon */
-    padding: 5px; /* Increase the hoverable area for the icon */
+    align-items: center; 
+    margin-left: 20px; 
+    padding: 5px; 
 }
 
 /* Dark mode toggle positioning */
 .darkmode-toggle {
-    margin-left: 20px; /* Space between account icon and dark mode toggle */
+    margin-left: 20px; 
+    margin-top: -5px;
     display: flex;
-    align-items: center; /* Vertically align the toggle icon */
+    align-items: center; 
+}
+
+/* Style for the dark mode toggle icon */
+#icon {
+    font-size: 2.5rem; 
+    cursor: pointer;
 }
 
 /* Hide the dropdown menu by default */
 .account-dropdown {
     display: none;
     position: absolute;
-    top: 100%;  /* Position directly below the icon */
+    top: 100%;  
     right: 0;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    width: 120px; /* Sufficient width for links */
-    padding: 5px 0; /* Padding around the dropdown links */
+    width: 120px; 
+    padding: 5px 0; 
 }
 
 /* Style for the dropdown links */
 .account-dropdown a {
     display: block;
-    padding: 10px 15px; /* Increase clickable area */
+    padding: 10px 15px; 
     text-decoration: none;
     color: #444; /* Default dark gray for both light and dark mode */
     font-size: 0.8rem; /* Font size for the dropdown links */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* Change background color and make the font purple when hovering over the dropdown links */
+
 .account-dropdown a:hover {
-    background-color: #f1f1f1; /* Light background when hovering */
-    color: #9b4dff; /* Purple color for hover state */
+    background-color: #f1f1f1; 
+    color: #9b4dff; 
 }
 
 /* Divider styling */
 .account-dropdown .divider {
-    height: 1px; /* Line thickness */
-    background-color: #ddd; /* Light gray color for the divider */
-    margin: 5px 0; /* Spacing around the line */
-    width: 100%; /* Full width of the dropdown */
+    height: 1px; 
+    background-color: #ddd; 
+    margin: 5px 0; 
+    width: 100%; 
 }
 
 /* Show the dropdown menu when hovering over the account container */
@@ -371,13 +378,7 @@ h5 .text-xl {
 .account-btn {
     display: inline-block;
     cursor: pointer;
-    padding: 5px; /* Increase the clickable area for the icon */
-}
-
-/* Style for the dark mode toggle icon */
-#icon {
-    font-size: 2rem; /* Adjust the size of the dark mode icon */
-    cursor: pointer;
+    padding: 5px;
 }
 
 .slider .slide_cont {
@@ -1407,4 +1408,8 @@ h5 .text-xl {
     .end_content .movie .card-box .cards::before {
         margin-top: 20rem;
     }
+}
+
+.icon-large {
+    font-size: 50px; 
 }
