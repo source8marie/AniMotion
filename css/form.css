@@ -3,18 +3,17 @@
 .main_con2 .description {
     display: flex;
     padding: 2rem;
-    background: #fff9bf;
-    border-color: #b8ae80;
-    border-radius: 0.2rem;
+    background: #181818;
+    border-color: #5a0052;
+    border-radius: 1rem;
 }
 
 .main_con2 p {
     float: right;
     margin-left: 2rem;
     font-size: 1.5rem;
-    color: #9d4600;
+    color: #ffffff;
     line-height: 2.6rem;
-    text-shadow: 0 0.1rem 0.1rem #ffffff;
     word-wrap: break-word;
     text-transform: none;
 }
@@ -23,7 +22,7 @@
     padding-left: 0.5rem;
     font-size: 3rem;
     font-weight: 900;
-    color: #ca7631;
+    color: #db0d0d;
     user-select: none;
     pointer-events: none;
 }
@@ -68,9 +67,9 @@ form .input_cont #name {
     overflow: scroll;
     border-width: 0.1rem;
     border-radius: 0.4rem;
-    border: 0.13rem solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.813);
     transition: 0.2s;
-    background: var(--bg_color);
+    background: #181818;
     font-size: 1.3rem;
     color: var(--primary_color);
 }
@@ -95,9 +94,9 @@ form .input_cont1 #email {
     overflow: scroll;
     border-width: 0.1rem;
     border-radius: 0.4rem;
-    border: 0.13rem solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.813);
     transition: 0.2s;
-    background: var(--bg_color);
+    background: #181818;
     font-size: 1.3rem;
     color: var(--primary_color);
     text-transform: none;
@@ -120,9 +119,9 @@ form .input_cont3 #subject {
     overflow: scroll;
     border-width: 0.1rem;
     border-radius: 0.4rem;
-    border: 0.13rem solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.813);
     transition: 0.2s;
-    background: var(--bg_color);
+    background: #181818;
     font-size: 1.3rem;
     color: var(--primary_color);
 }
@@ -142,9 +141,9 @@ form .input_cont4 #message {
     padding: 1rem;
     border-width: 0.13rem;
     border-radius: 0.4rem;
-    border: 0.13rem solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.813);
     transition: 0.2s;
-    background: var(--bg_color);
+    background: #181818;
     font-size: 1.3rem;
     color: var(--primary_color);
 }
@@ -152,15 +151,13 @@ form #name:hover,
 form #email:hover,
 form #subject:hover,
 form #message:hover{
-    border: 0.1rem solid #f39140;
-    box-shadow: var(--shadow);
+    border: 0.1rem solid #9d00d1;
 }
 form #open-popup-btn {
     font-size: 1.5rem;
     padding: 1rem 3.5rem;
-    background: var(--bg_color);
+    background: #9e10ba;
     border-width: 0.1rem;
-    border: 0.1rem solid #f340a2;
     border-radius: 0.5rem;
     color: var(--btn_orange);
     cursor: pointer;
@@ -168,9 +165,8 @@ form #open-popup-btn {
 }
 
 form #open-popup-btn:hover {
-    background: #ac4c89;
+    background: #5a0052;
     color: #fff;
-    box-shadow: var(--shadow);
 }
 
   .center {
