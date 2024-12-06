@@ -128,12 +128,6 @@ section {
     color: var(--orange);
 }
 
-.bi-person-circle,
-.bi-clock,
-.bi-fire {
-    padding-right: 0.3rem;
-}
-
 .box_element .img_details .icn_content .clock {
     display: flex;
     font-size: 1.1rem;

@@ -330,7 +330,7 @@ h5 .text-xl {
 /* Hover effect */
 .account-dropdown a:hover {
     background-color: #f1f1f1 !important;  /* Light grey background on hover */
-    color: #4a1e82 !important;  /* Purple color on hover */
+    color: #ff1ef6 !important;  /* Purple color on hover */
 }
 
 /* Style for the divider */
@@ -951,6 +951,21 @@ h5 .text-xl {
     color: var(--orange);
 }
 
+/* Fade In and Out Transition */
+html.page-transition {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+html.page-transition.fade-out {
+    opacity: 0;
+}
+
+html.page-transition.fade-in {
+    opacity: 1;
+}
+
+
 @media (max-width:1135px){
     html {
         font-size: 59%;
@@ -984,7 +999,7 @@ h5 .text-xl {
     header .navbar a,
     header .navbar .search-container,
     header .navbar .account-container {
-        width: 100%; /* Full-width links and elements */
+        width: 100%; 
         text-align: left;
         padding: 1rem 0;
     }
