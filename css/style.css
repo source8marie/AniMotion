@@ -475,11 +475,12 @@ h5 .text-xl {
 }
 
 .content .sub_content {
-    background-color: var(--drk_bdy_color);
-    border: .1rem solid var(--border_color1);
-    border-radius: .4rem;
-    box-shadow: var(--shadow);
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #6a0572;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(106, 5, 114, 0.8);
 }
+
 
 .heading {
     font-family: 'Poppins', sans-serif;
@@ -567,15 +568,28 @@ h5 .text-xl {
 }
 
 .content .head_content .read-more {
-    font-size: 0.8rem;
-    color: var(--orange);
-    cursor: pointer;
-    margin-top: 0.5rem;
-    text-decoration: underline;
-    align-self: flex-start; 
+    padding: 0.9rem 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    width: 90px;
+    background: #b200ab;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    display: inline-block;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none; 
 }
 
+.content .head_content .read-more:hover {
+    background: #470044; 
+}
 
+.content .head_content .read-more i {
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: #fff;
+}
 
 .box_container {
     display: flex;
@@ -653,16 +667,16 @@ h5 .text-xl {
 .sub_content .more {
     margin-top: 2rem;
     padding: 1rem;
-    background-color: #424670;
-    border-radius: .4rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     cursor: pointer;
-    border: .1rem solid var(--border_color1);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
 
+
 .sub_content .more:hover {
-    background-color: #470044;
+    background-color: #b200ab;
 }
 
 .sub_content .more a {
@@ -719,6 +733,7 @@ h5 .text-xl {
 
 
 .end_content .prof {
+    background: rgba(0, 0, 0, 0.8);
     border: .1rem solid var(--border_color1);
     border-radius: 0.4rem;
     box-shadow: var(--shadow);
@@ -781,14 +796,13 @@ h5 .text-xl {
     padding-left: 0rem;
 }
 
-
 .end_content .movie {
-    border: .1rem solid var(--border_color1);
-    border-radius: 0.4rem;
+    border: 2px solid #6a0572;
+    border-radius: 15px;
     font-size: 1.3rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 30px rgba(106, 5, 114, 0.8);
     flex: 1 1 38.3rem;
-    background: var(--drk_bdy_color);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .end_content .movie .card-box {
