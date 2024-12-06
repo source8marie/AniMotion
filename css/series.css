@@ -60,7 +60,6 @@ section {
 .sub_con2 .main_con2 {
     padding: 3rem;
     padding-top: 4rem;
-    border: var(--border-color3);
     display: block;
 }
 
@@ -176,41 +175,33 @@ section {
 
 .popular {
     flex-shrink: 1;
-    border: var(--border-color3);
-    background: var(--drk_bdy_color);
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #6a0572;
     width: 33.33333%;
     height: fit-content;
     margin-left: 1.5rem;
-    border-radius: 0.2rem;
+    border-radius: 15px;
     float: left;
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 30px rgba(106, 5, 114, 0.8);
     position: sticky;
     top: 8rem;
 }
 
 .popular .tab {
-    max-height: 7.5rem;
-    width: 100%;
-    border-bottom: var(--border-color3);
-    display: flex;
-}
-
-.tab .pop {
     width: 50%;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-align: center;
-    border: var(--border-color3);
-    border-width: 0 0.1rem 0.1rem 0;
-    color: var(--orange);
+    color: #ffffff;
     padding: 2rem 0;
-    background: var(--btn-bg);
 }
 
-.tab .pop1 {
-    border: var(--border-color3);
-    border-width: 0 0 0.1rem 0.1rem;
-    padding: 2rem 0;
-    width: 50%;
+.tab .pop{
+    font-family: 'Poppins';
+}
+
+.divider {
+    border: none;
+    border-top: 2px solid #6a0572; /* Adjust color and thickness */
 }
 
 .popular .sub_main {
@@ -284,18 +275,18 @@ section {
     font-family: 'Poppins';
     font-size: 1.3rem;
     width: 100%;
-    border: var(--border-color3);
-    border-width: 0 .1rem 0.1rem;
-    border-bottom-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
-    color: var(--primary_color);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ffffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     transition: all 0.3s;
     cursor: pointer;
 }
 
 .sub_con2 .load_more:hover {
-    color: var(--orange);
-    background: var(--btn-bg);
+    color: #ffffff;
+    background: #b200ab;
 }
 
 .footer {
