@@ -1,47 +1,5 @@
 // Scroll to hide (if applicable)
 
-// Dark mode setup
-const body = document.body;
-
-// Toggle theme function
-const tog = () => {
-  const icon = document.getElementById('icon');
-  icon.classList.toggle("bi-moon-fill");
-  body.classList.toggle("dark_theme");
-
-  // Save user's preference in localStorage
-  localStorage.setItem('theme', body.classList.contains('dark_theme') ? 'dark' : 'light');
-  localStorage.setItem('icon', icon.classList.contains('bi-moon-fill') ? 'moon' : 'sun');
-};
-
-// Retrieve user preference for theme and icon from localStorage
-const storedTheme = localStorage.getItem('theme');
-const storedIcon = localStorage.getItem('icon');
-const icon = document.getElementById('icon');
-
-// Default to dark theme if no preference is set
-if (!storedTheme) {
-  body.classList.add('dark_theme'); // Default to dark theme
-  icon.classList.add('bi-moon-fill'); // Default icon to moon
-  localStorage.setItem('theme', 'dark');
-  localStorage.setItem('icon', 'moon');
-} else {
-  // Apply the user's stored preference
-  if (storedTheme === 'dark') {
-    body.classList.add('dark_theme');
-  } else {
-    body.classList.remove('dark_theme');
-  }
-  
-
-  if (storedIcon === 'moon') {
-    icon.classList.add('bi-moon-fill');
-  } else if (storedIcon === 'sun') {
-    body.classList.remove('dark_theme');
-    icon.classList.remove('bi-moon-fill');
-  }
-}
-
 function toggleDescription(button) {
   const description = button.previousElementSibling; // The <p> element before the button
   if (description.classList.contains('expanded')) {
