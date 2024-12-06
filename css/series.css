@@ -22,26 +22,6 @@
     --btn-bg: rgba(255, 0, 123, 0.15);
 }
 
-.dark_theme {
-    --drk_bdy_color: #ffffff;
-    --body_color: #ffffff;
-    --primary_color: #110d38;
-    --bg_color: #8488b6;
-    --secondary_color: #0e0202;
-    --tertiary_color: #0e0202;
-    --border_color: rgba(0, 0, 0, 0.3);
-    --border_color1: rgba(0, 0, 0, 0.1);
-    --border-color3: 0.1rem solid rgba(0, 0, 0, 0.1);
-    --eee_color: #110d38;
-    --navbg: #ffffff;
-    --icon: #6b0067;
-    --title: #470044;
-    --time_thmb: #888cb8;
-    --icon_col: #888cb8;
-    --btn-bg: rgba(28, 23, 25, 0.05);
-}
-
-
 section {
     overflow-y: clip;
 }
