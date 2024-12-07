@@ -116,7 +116,7 @@ section {
 }
 
 .box_element .img_details h2 a:hover {
-    color: var(--orange);
+    color: #d600ce;
 }
 
 .box_element .img_details .icn_content {
@@ -132,7 +132,7 @@ section {
 }
 
 .box_element .img_details .icn_content a:hover {
-    color: var(--orange);
+    color: #d600ce;
 }
 
 .box_element .img_details .icn_content .clock {
@@ -249,7 +249,7 @@ section {
 }
 
 .sub_main .cards .img_detail a:hover {
-    color: var(--orange);
+    color: #d600ce;
 }
 
 .sub_main .cards .img_detail p {
@@ -365,7 +365,7 @@ section {
 }
 
 .footer {
-    margin-top: 5.5rem;
+    margin-top: 6.5rem;
 }
 
 

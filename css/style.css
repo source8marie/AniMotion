@@ -945,7 +945,7 @@ h5 .text-xl {
 }
 
 .footer .icons a:hover {
-    color: var(--orange);
+    color: #c93ec4;
 }
 
 /* Fade In and Out Transition */
