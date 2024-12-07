@@ -2,8 +2,8 @@
 
 
 .logo img {
-    width: auto;         
-    height: 80px;        
+    width: auto;
+    height: 80px;
     margin-top: 19px;
 }
 
@@ -12,7 +12,8 @@
     --orange: #ffff;
     --body_color: #470044;
     --primary_color: #fff;
-    --bg_color: #211e46; /* You can keep this or change it if needed */
+    --bg_color: #211e46;
+    /* You can keep this or change it if needed */
     --secondary_color: #e4e4e4;
     --tertiary_color: #fff;
     --border_color: #fff;
@@ -50,7 +51,8 @@ body {
     background-size: cover;
     min-height: 100vh;
     width: 100%;
-    background-color: var(--bg_color); /* Fallback color */
+    background-color: var(--bg_color);
+    /* Fallback color */
 }
 
 
@@ -97,8 +99,8 @@ header {
 }
 
 header.head {
-    height: 80px; 
-    line-height: 60px; 
+    height: 80px;
+    line-height: 60px;
 }
 
 .head .hidden {
@@ -130,7 +132,7 @@ header .navbar a {
 
 @media (min-width:820px) {
 
-    header .navbar a > span {
+    header .navbar a>span {
         height: 0.25rem;
         width: 0;
         position: absolute;
@@ -141,34 +143,41 @@ header .navbar a {
         transition: 0.6s;
     }
 
-    header .navbar a:nth-child(1):hover > span {
+    header .navbar a:nth-child(1):hover>span {
         width: 87%;
     }
+
     header .navbar a:nth-child(4):hover span {
         width: 90%;
     }
-    header .navbar a:nth-child(1) > span.on{
+
+    header .navbar a:nth-child(1)>span.on {
         width: 87%;
     }
-    header .navbar a:nth-child(4) > span.on{
+
+    header .navbar a:nth-child(4)>span.on {
         width: 90%;
     }
-    header .navbar a:nth-child(2):hover span{
+
+    header .navbar a:nth-child(2):hover span {
         width: 89%;
     }
-    header .navbar a:nth-child(2) > span.on{
+
+    header .navbar a:nth-child(2)>span.on {
         width: 89%;
     }
-    header .navbar a:nth-child(3):hover span{
+
+    header .navbar a:nth-child(3):hover span {
         width: 88%;
     }
-    header .navbar a:nth-child(3) > span.on{
+
+    header .navbar a:nth-child(3)>span.on {
         width: 88%;
     }
 
 }
 
-header .navbar > span {
+header .navbar>span {
     position: relative;
     margin-left: .2rem;
 }
@@ -269,7 +278,7 @@ h5 .text-xl {
 
 .navbar {
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 }
@@ -277,14 +286,15 @@ h5 .text-xl {
 
 .navbar .search-container,
 .navbar .account-container {
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 /* Container for the search bar */
 .search-container {
     display: flex;
     align-items: center;
-    margin-right: 10px; /* Adjust space between the search bar and account icon */
+    margin-right: 10px;
+    /* Adjust space between the search bar and account icon */
 }
 
 .search {
@@ -294,12 +304,12 @@ h5 .text-xl {
 
 /* Style for the dropdown container */
 .account-container {
-    position: relative; 
+    position: relative;
 }
 
 /* Hide dropdown initially */
 .account-dropdown {
-    display: none; 
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -322,15 +332,18 @@ h5 .text-xl {
     display: block;
     padding: 10px 15px;
     text-decoration: none;
-    color: #303030 !important;  /* Red color for the text */
+    color: #303030 !important;
+    /* Red color for the text */
     font-size: 0.8rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect */
 .account-dropdown a:hover {
-    background-color: #f1f1f1 !important;  /* Light grey background on hover */
-    color: #ff1ef6 !important;  /* Purple color on hover */
+    background-color: #f1f1f1 !important;
+    /* Light grey background on hover */
+    color: #ff1ef6 !important;
+    /* Purple color on hover */
 }
 
 /* Style for the divider */
@@ -518,12 +531,12 @@ h5 .text-xl {
     display: flex;
     gap: 1.5rem;
     margin: 3rem 2rem;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .content .head_content .img {
     flex: 1 1 40rem;
-    width: 25rem; 
+    width: 25rem;
     height: 24rem;
     position: relative;
     box-shadow: var(--shadow);
@@ -538,10 +551,10 @@ h5 .text-xl {
 }
 
 .content .head_content .text {
-    flex: 2 1 40rem; 
+    flex: 2 1 40rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .content .head_content a {
@@ -549,7 +562,7 @@ h5 .text-xl {
     font-size: 2.5rem;
     line-height: 4rem;
     color: var(--primary_color);
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
 }
 
 .content .head_content .description {
@@ -557,14 +570,14 @@ h5 .text-xl {
     color: var(--primary_color);
     line-height: 1.6;
     text-align: justify;
-    overflow: hidden; 
-    max-height: 6rem; 
+    overflow: hidden;
+    max-height: 6rem;
     transition: max-height 0.3s ease-in-out;
-    text-transform: none; 
+    text-transform: none;
 }
 
 .content .head_content .description.expanded {
-    max-height: none; 
+    max-height: none;
 }
 
 .content .head_content .read-more {
@@ -578,11 +591,11 @@ h5 .text-xl {
     display: inline-block;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
     border: 1px solid #ffffff;
-    outline: none; 
+    outline: none;
 }
 
 .content .head_content .read-more:hover {
-    background: #282828; 
+    background: #282828;
     border-radius: 0.3rem;
     border: 1px solid #9d00d1;
     color: #9d00d1;
@@ -963,13 +976,15 @@ html.page-transition.fade-in {
 }
 
 
-@media (max-width:1135px){
+@media (max-width:1135px) {
     html {
         font-size: 59%;
     }
+
     header {
         padding: 2rem 5%;
     }
+
     header .navbar .search {
         margin-left: 0;
     }
@@ -987,16 +1002,18 @@ html.page-transition.fade-in {
 
     /* Adjusting the navbar for smaller screens */
     header .navbar {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
+        /* Stack items vertically */
         align-items: flex-start;
         gap: 1rem;
-        display: none; /* Initially hidden for mobile */
+        display: none;
+        /* Initially hidden for mobile */
     }
 
     header .navbar a,
     header .navbar .search-container,
     header .navbar .account-container {
-        width: 100%; 
+        width: 100%;
         text-align: left;
         padding: 1rem 0;
     }
@@ -1014,16 +1031,19 @@ html.page-transition.fade-in {
 
     header .navbar .account-dropdown {
         position: relative;
-        width: 100%; /* Make dropdown full-width */
-        display: none; /* Hide by default */
+        width: 100%;
+        /* Make dropdown full-width */
+        display: none;
+        /* Hide by default */
     }
 
     header .navbar .account-container:hover .account-dropdown {
-        display: block; /* Show dropdown on hover */
+        display: block;
+        /* Show dropdown on hover */
     }
 
     /* Show navbar when toggler is checked */
-    #toggler:checked ~ .navbar {
+    #toggler:checked~.navbar {
         display: flex;
     }
 }
@@ -1035,19 +1055,23 @@ html.page-transition.fade-in {
     }
 
     header .logo img {
-        max-width: 150px; /* Reduce logo size for small screens */
+        max-width: 150px;
+        /* Reduce logo size for small screens */
     }
 
     header .fas.fa-bars {
         display: block;
         cursor: pointer;
-        font-size: 2.5rem; /* Bigger icon for toggle */
+        font-size: 2.5rem;
+        /* Bigger icon for toggle */
     }
 
     header .navbar {
         display: none;
-        flex-direction: column; /* Stack items vertically */
-        background-color: #fff; /* Background for navbar */
+        flex-direction: column;
+        /* Stack items vertically */
+        background-color: #fff;
+        /* Background for navbar */
         position: absolute;
         top: 100%;
         left: 0;
@@ -1128,7 +1152,7 @@ html.page-transition.fade-in {
     header #toggler:checked~.navbar {
         clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
     }
-    
+
     header .navbar .search {
         margin: 1.5rem;
         width: 20rem;
@@ -1138,13 +1162,16 @@ html.page-transition.fade-in {
     header .navbar .search {
         margin-right: 1rem;
     }
+
     header .navbar .search:hover {
         transform: scale(1.1);
     }
+
     .slide_cont .img_box a {
         font-size: 1.6rem;
         margin: 1.3rem;
     }
+
     .content .head_content a {
         margin-top: 1rem;
     }
@@ -1169,14 +1196,14 @@ html.page-transition.fade-in {
         margin-top: 30rem;
     }
 
-    header .navbar > span:hover .search {
+    header .navbar>span:hover .search {
         background: #ffe0cc;
         transform: scale(1.1);
         border: .1rem solid var(--orange);
         box-shadow: var(--shadow);
     }
 
-    header .navbar > span:hover input::placeholder {
+    header .navbar>span:hover input::placeholder {
         color: #393939;
     }
 
@@ -1211,6 +1238,7 @@ html.page-transition.fade-in {
     header .navbar .search {
         background: #ffeae0;
     }
+
     header .navbar .search:hover {
         transform: scale(1.1);
     }
@@ -1347,6 +1375,7 @@ html.page-transition.fade-in {
         font-size: 1.3rem;
         margin-top: 21rem;
     }
+
     .footer .credit {
         display: block;
     }
@@ -1376,6 +1405,7 @@ html.page-transition.fade-in {
         font-size: 2rem;
         margin: 1.8rem;
     }
+
     .content .head_content .img::after {
         content: 'New Series';
         font-size: 1.2rem;
@@ -1391,7 +1421,7 @@ html.page-transition.fade-in {
         font-size: 1.3rem;
         margin-right: 0.8rem;
     }
-    
+
     .links .list p {
         display: flex;
         align-items: center;
@@ -1400,7 +1430,7 @@ html.page-transition.fade-in {
         font-size: 1.5rem;
         cursor: pointer;
     }
-    
+
     .cards .s_icon a i {
         font-size: 1.2rem;
     }
@@ -1444,61 +1474,37 @@ html.page-transition.fade-in {
 }
 
 .icon-large {
-    font-size: 50px; 
+    font-size: 50px;
 }
 
 .bio-input {
-    width: 100%; 
-    max-width: 600px; 
+    width: 100%;
+    max-width: 600px;
     height: 70px;
     margin-top: 10px;
     padding: 10px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    resize: none; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .bio-input:focus {
-    border-color: #007bff; 
+    border-color: #007bff;
     outline: none;
-    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); 
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
 }
-
-/* Additional styles for the button grid 
-.category-buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.category-button {
-    padding: 15px;
-    text-align: center;
-    background-color: #3a3a3a;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.category-button:hover {
-    background-color: #211e46;
-}
-*/
 
 @media (max-width: 768px) {
     .category-buttons {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .category-buttons {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }

@@ -52,7 +52,7 @@ if (window.matchMedia("(max-width: 580px)").matches) {
 }
 
 if (window.matchMedia("(max-width: 580px)").matches) {
-   img_cont1.style.marginTop = '0';
+  img_cont1.style.marginTop = '0';
 }
 
 ////

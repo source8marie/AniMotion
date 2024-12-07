@@ -31,9 +31,9 @@ section {
 }
 
 .page_title i {
-    margin-right: 10px;  
-    vertical-align: sub;  
-    font-size: 7rem;  
+    margin-right: 10px;
+    vertical-align: sub;
+    font-size: 7rem;
 }
 
 
@@ -161,11 +161,11 @@ section {
     display: inline-block;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
     border: 1px solid #ffffff;
-    outline: none; 
+    outline: none;
 }
 
 .img_details .btn_read:hover {
-    background: #282828; 
+    background: #282828;
     border-radius: 0.3rem;
     border: 1px solid #9d00d1;
     color: #9d00d1;
@@ -193,13 +193,14 @@ section {
     padding: 2rem 0;
 }
 
-.tab .pop{
+.tab .pop {
     font-family: 'Poppins';
 }
 
 .divider {
     border: none;
-    border-top: 2px solid #6a0572; /* Adjust color and thickness */
+    border-top: 2px solid #6a0572;
+    /* Adjust color and thickness */
 }
 
 .popular .sub_main {
@@ -292,27 +293,27 @@ section {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.813);
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 75px;
     margin-top: 20px;
 }
 
 .stat-item {
     text-align: center;
-    margin: 0 20px; 
+    margin: 0 20px;
     margin-top: 10px
 }
 
 .stat-item p {
     margin: 0;
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     color: #9d00d1;
 }
 
 .stat-item p:first-child {
-    font-size: 2rem; 
+    font-size: 2rem;
     color: #ffffff;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .popular2 {
@@ -349,12 +350,12 @@ section {
 }
 
 .tab2:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .tab2.selected {
-    color: #9d00d1; 
-    background-color: rgba(255, 255, 255, 0.2); 
+    color: #9d00d1;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .divider2 {

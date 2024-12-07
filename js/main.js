@@ -3,11 +3,11 @@
 function toggleDescription(button) {
   const description = button.previousElementSibling; // The <p> element before the button
   if (description.classList.contains('expanded')) {
-      description.classList.remove('expanded');
-      button.textContent = 'Read More';
+    description.classList.remove('expanded');
+    button.textContent = 'Read More';
   } else {
-      description.classList.add('expanded');
-      button.textContent = 'Read Less';
+    description.classList.add('expanded');
+    button.textContent = 'Read Less';
   }
 }
 
@@ -114,7 +114,7 @@ document.addEventListener('click', function (event) {
   if (navbar.contains(event.target) && toggler.checked) {
     toggler.checked = true;
   }
-  else if(!toggler.checked && !navbar.contains(event.target)){
+  else if (!toggler.checked && !navbar.contains(event.target)) {
     toggler.checked = false;
   }
 });

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wheel.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
     <style>
         body {
@@ -21,9 +22,9 @@
 
 
 <!-- NAVIGATION BAR -->
- 
+
 <body>
-    
+
     <button type="button" class="btn_up" id="btn_up">
         <i class="fa-solid fa-circle-up"></i>
     </button>
@@ -32,22 +33,22 @@
     <header class="head">
         <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
-    
+
         <a href="#" class="logo">
             <img src="img/animotionhdr1.png" alt="T&T's AniMotion Logo">
         </a>
-    
+
         <nav class="navbar" id="navbar">
             <a href="index.html" style="color:#ff1ef6">Home <span class="on"></span></a>
             <a href="series.html">Series<span></span></a>
             <a href="movies.html">Movies<span></span></a>
             <a href="contact.html">Contact Us<span></span></a>
-            
+
             <div class="search-container">
                 <input type="text" placeholder="Search.." class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-    
+
             <!-- Account button with hover dropdown (No link now) -->
             <div class="account-container">
                 <a class="account-btn">
@@ -59,12 +60,9 @@
                     <a href="index-login.html">Log Out</a>
                 </div>
             </div>
-            
+
         </nav>
     </header>
-    
-    
-    
 
     <!-- Main Screen | Sliding Content-->
 
@@ -84,7 +82,7 @@
                 </svg>
             </span>
 
-<!-- SLiding Content 1  -->
+            <!-- Sliding Content 1  -->
 
             <div class="page">
                 <div class="img_box">
@@ -113,13 +111,13 @@
                 </div>
             </div>
 
- <!-- SLiding Content 2  -->
+            <!-- Sliding Content 2  -->
 
             <!-- page2 -->
             <div class="page">
                 <div class="img_box">
                     <img src="img/classroom.jpg" alt="">
-                    <a href="#">Classroom of the Elite (Season 1-2)  </a>
+                    <a href="#">Classroom of the Elite (Season 1-2) </a>
                 </div>
                 <div class="img_box">
                     <img src="img/op4.jpg" alt="">
@@ -139,13 +137,13 @@
                 </div>
                 <div class="img_box">
                     <img src="img/steins gate.jpg" alt="">
-                    <a href="">Steins;Gate (Seasons 1-2 + Movie) 
+                    <a href="">Steins;Gate (Seasons 1-2 + Movie)
                         HEVC</a>
                 </div>
             </div>
 
 
-<!-- SLiding Content 3 -->
+            <!-- SLiding Content 3 -->
 
             <!-- page3 -->
             <div class="page">
@@ -172,14 +170,33 @@
                 <div class="img_box">
                     <img src="img/mha.jpg" alt="">
                     <a href="">My Hero Academia (Seasons 1-6 + Movies)</a>
-                        
+
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
+
+    <!-- Trigger Button for Opening the Spin the Wheel Modal -->
+    <div class="wheel-wrapper">
+        <button class="wheel-trigger-button" id="openWheelButton">Spin the Wheel to Choose Your Next Anime!</button>
+    </div>
 
 
- <!-- 2ND BOX | ANIME WATCHED -->
+
+    <!-- Modal for Spin the Wheel -->
+    <div id="wheelModal" class="wheel-modal">
+        <div class="wheel-modal-content">
+            <span id="closeModal" class="wheel-close-button">&times;</span>
+            <div class="wheel-container">
+                <canvas id="wheel" width="500" height="500"></canvas>
+                <div class="wheel-arrow"></div>
+            </div>
+            <button id="spinButton" class="wheel-spin-button">Auto Spin</button>
+            <p id="result" class="wheel-result"></p>
+        </div>
+    </div>
+
+    <!-- 2ND BOX | ANIME WATCHED -->
     <section class="content" id="content">
         <div class="sub_content">
             <div class="inner_content">
@@ -194,15 +211,25 @@
                 <div class="text">
                     <a href="#">Shingeki no Kyojin (Attack on Titan)</a>
                     <p class="description">
-                        Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure. To ensure their survival, the remnants of humanity began living within defensive barriers, resulting in one hundred years without a single titan encounter. However, that fragile calm is soon shattered when a colossal Titan manages to breach the supposedly impregnable outer wall, reigniting the fight for survival against the man-eating abominations.
-            
-                        After witnessing a horrific personal loss at the hands of the invading creatures, Eren Yeager dedicates his life to their eradication by enlisting into the Survey Corps, an elite military unit that combats the merciless humanoids outside the protection of the walls. Eren, his adopted sister Mikasa Ackerman, and his childhood friend Armin Arlert join the brutal war against the Titans and race to discover a way of defeating them before the last walls are breached.
+                        Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called
+                        Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants
+                        truly terrifying is that their taste for human flesh is not born out of hunger but what appears
+                        to be out of pleasure. To ensure their survival, the remnants of humanity began living within
+                        defensive barriers, resulting in one hundred years without a single titan encounter. However,
+                        that fragile calm is soon shattered when a colossal Titan manages to breach the supposedly
+                        impregnable outer wall, reigniting the fight for survival against the man-eating abominations.
+
+                        After witnessing a horrific personal loss at the hands of the invading creatures, Eren Yeager
+                        dedicates his life to their eradication by enlisting into the Survey Corps, an elite military
+                        unit that combats the merciless humanoids outside the protection of the walls. Eren, his adopted
+                        sister Mikasa Ackerman, and his childhood friend Armin Arlert join the brutal war against the
+                        Titans and race to discover a way of defeating them before the last walls are breached.
                     </p>
                     <span class="read-more" onclick="toggleDescription(this)">Read More</span>
                 </div>
             </div>
-            
-            
+
+
             <div class="head_content">
                 <!-- Image Container -->
                 <div class="img">
@@ -212,16 +239,27 @@
                 <div class="text">
                     <a href="#">Haikyuu!! (Complete Seasons)</a>
                     <p class="description">
-                        Ever since having witnessed the "Little Giant" and his astonishing skills on the volleyball court, Shouyou Hinata has been bewitched by the dynamic nature of the sport. Even though his attempt to make his debut as a volleyball regular during a middle school tournament went up in flames, he longs to prove that his less-than-impressive height ceases to be a hindrance in the face of his sheer will and perseverance.
-            
-                        When Hinata enrolls in Karasuno High School, the Little Giant's alma mater, he believes that he is one step closer to his goal of becoming a professional volleyball player. Although the school only retains a shadow of its former glory, Hinata's conviction isn't shaken until he learns that Tobio Kageyama—the prodigy who humiliated Hinata's middle school volleyball team in a crushing defeat—is now his teammate.
-            
-                        To fulfill his desire of leaving a mark on the realm of volleyball—so often regarded as the domain of the tall and the strong—Hinata must smooth out his differences with Kageyama. Only when Hinata learns what it takes to be a part of a team will he be able to join the race to the top in earnest.
+                        Ever since having witnessed the "Little Giant" and his astonishing skills on the volleyball
+                        court, Shouyou Hinata has been bewitched by the dynamic nature of the sport. Even though his
+                        attempt to make his debut as a volleyball regular during a middle school tournament went up in
+                        flames, he longs to prove that his less-than-impressive height ceases to be a hindrance in the
+                        face of his sheer will and perseverance.
+
+                        When Hinata enrolls in Karasuno High School, the Little Giant's alma mater, he believes that he
+                        is one step closer to his goal of becoming a professional volleyball player. Although the school
+                        only retains a shadow of its former glory, Hinata's conviction isn't shaken until he learns that
+                        Tobio Kageyama—the prodigy who humiliated Hinata's middle school volleyball team in a crushing
+                        defeat—is now his teammate.
+
+                        To fulfill his desire of leaving a mark on the realm of volleyball—so often regarded as the
+                        domain of the tall and the strong—Hinata must smooth out his differences with Kageyama. Only
+                        when Hinata learns what it takes to be a part of a team will he be able to join the race to the
+                        top in earnest.
                     </p>
                     <span class="read-more" onclick="toggleDescription(this)">Read More</span>
                 </div>
             </div>
-            
+
 
             <div class="head_content">
                 <!-- Image Container -->
@@ -232,16 +270,24 @@
                 <div class="text">
                     <a href="#">Death Note (Complete Seasons)</a>
                     <p class="description">
-                        Ryuk, a god of death, drops his Death Note into the human world for personal pleasure. In Japan, prodigious high school student Light Yagami stumbles upon it. Inside the notebook, he finds a chilling message: those whose names are written in it shall die. Its nonsensical nature amuses Light; but when he tests its power by writing the name of a criminal in it, they suddenly meet their demise.
-            
-                        Realizing the Death Note's vast potential, Light commences a series of nefarious murders under the pseudonym "Kira," vowing to cleanse the world of corrupt individuals and create a perfect society where crime ceases to exist. However, the police quickly catch on, and they enlist the help of L—a mastermind detective—to uncover the culprit.
-            
-                        Death Note tells the thrilling tale of Light and L as they clash in a great battle-of-minds, one that will determine the future of the world.
+                        Ryuk, a god of death, drops his Death Note into the human world for personal pleasure. In Japan,
+                        prodigious high school student Light Yagami stumbles upon it. Inside the notebook, he finds a
+                        chilling message: those whose names are written in it shall die. Its nonsensical nature amuses
+                        Light; but when he tests its power by writing the name of a criminal in it, they suddenly meet
+                        their demise.
+
+                        Realizing the Death Note's vast potential, Light commences a series of nefarious murders under
+                        the pseudonym "Kira," vowing to cleanse the world of corrupt individuals and create a perfect
+                        society where crime ceases to exist. However, the police quickly catch on, and they enlist the
+                        help of L—a mastermind detective—to uncover the culprit.
+
+                        Death Note tells the thrilling tale of Light and L as they clash in a great battle-of-minds, one
+                        that will determine the future of the world.
                     </p>
                     <span class="read-more" onclick="toggleDescription(this)">Read More</span>
                 </div>
             </div>
-            
+
             <div class="head_content">
                 <!-- Image Container -->
                 <div class="img">
@@ -251,15 +297,23 @@
                 <div class="text">
                     <a href="#">Jujutsu Kaisen (Season 1 + Movie)</a>
                     <p class="description">
-                        Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the King of Curses.
-            
-                        Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Prefectural Jujutsu High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer.
+                        Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji
+                        Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden
+                        grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he
+                        unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji
+                        finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice
+                        and negativity—after swallowing the said item, revealed to be a finger belonging to the demon
+                        Sukuna Ryoumen, the King of Curses.
+
+                        Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own
+                        newfound powers. Introduced to the Tokyo Prefectural Jujutsu High School, he begins to walk down
+                        a path from which he cannot return—the path of a Jujutsu sorcerer.
                     </p>
                     <span class="read-more" onclick="toggleDescription(this)">Read More</span>
                 </div>
             </div>
-            
-            
+
+
             <div class="head_content">
                 <!-- Image Container -->
                 <div class="img">
@@ -269,11 +323,18 @@
                 <div class="text">
                     <a href="#">Hunter x Hunter (Complete Series + Movie)</a>
                     <p class="description">
-                        Hunters are specialized in a wide variety of fields, ranging from treasure hunting to cooking. They have access to otherwise unavailable funds and information that allow them to pursue their dreams and interests. However, being a hunter is a special privilege, only attained by taking a deadly exam with an extremely low success rate.
-            
-                        Gon Freecss, a 12-year-old boy with the hope of finding his missing father, sets out on a quest to take the Hunter Exam. Along the way, he picks up three companions who also aim to take the dangerous test: the revenge-seeking Kurapika, aspiring doctor Leorio Paladiknight, and a mischievous child the same age as Gon, Killua Zoldyck.
-            
-                        As the four aspiring hunters embark on a perilous adventure, they fight for their dreams while defying the odds.
+                        Hunters are specialized in a wide variety of fields, ranging from treasure hunting to cooking.
+                        They have access to otherwise unavailable funds and information that allow them to pursue their
+                        dreams and interests. However, being a hunter is a special privilege, only attained by taking a
+                        deadly exam with an extremely low success rate.
+
+                        Gon Freecss, a 12-year-old boy with the hope of finding his missing father, sets out on a quest
+                        to take the Hunter Exam. Along the way, he picks up three companions who also aim to take the
+                        dangerous test: the revenge-seeking Kurapika, aspiring doctor Leorio Paladiknight, and a
+                        mischievous child the same age as Gon, Killua Zoldyck.
+
+                        As the four aspiring hunters embark on a perilous adventure, they fight for their dreams while
+                        defying the odds.
                     </p>
                     <span class="read-more" onclick="toggleDescription(this)">Read More</span>
                 </div>
@@ -314,11 +375,11 @@
                         </div>
                         <a href="#">Black Clover (Seasons 1-4 + OVAs) </a>
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="sub_boxes">
-                    
+
                     <div class="card_container">
                         <div class="sub_img" name="fantasy">
                             <img src="img/fabh.jpg" alt="">
@@ -331,9 +392,9 @@
                         </div>
                         <a href="#">Dr. Stone (Seasons 1-2 + Specials)</a>
                     </div>
-                    
+
                 </div>
-                
+
                 <div class="sub_boxes">
 
                     <div class="card_container">
@@ -351,7 +412,7 @@
 
                 </div>
                 <div class="sub_boxes">
-                    
+
                     <div class="card_container">
                         <div class="sub_img" name="mecha">
                             <img src="img/neon_ge.jpg" alt="">
@@ -362,18 +423,20 @@
                         <div class="sub_img" name="fantasy">
                             <img src="img/re-zero.jpg" alt="">
                         </div>
-                        <a href="#">Re:ZERO -Starting Life in Another World (Seasons 1-2 + Movie + OVAs) 1080p Dual Audio HEVC</a>
+                        <a href="#">Re:ZERO -Starting Life in Another World (Seasons 1-2 + Movie + OVAs) 1080p Dual
+                            Audio HEVC</a>
                     </div>
 
                 </div>
-                
+
                 <div class="sub_boxes">
 
                     <div class="card_container">
                         <div class="sub_img" name="Action">
                             <img src="img/assasin.jpg" alt="">
                         </div>
-                        <a href="#">Assassination Classroom (Seasons 1-2 + Movie + OVAs + Special) 1080p Dual Audio HEVC</a>
+                        <a href="#">Assassination Classroom (Seasons 1-2 + Movie + OVAs + Special) 1080p Dual Audio
+                            HEVC</a>
                     </div>
                     <div class="card_container">
                         <div class="sub_img" name="thrill">
@@ -411,6 +474,7 @@
 
     </section>
 
+
     <section class="end_content" id="end_content">
 
         <div class="ends">
@@ -419,7 +483,7 @@
                     <h3 class="heading" style="font-size:3rem" ;> Popular Genres</h3>
                 </div>
                 <div class="card-box">
-                    <div class="cards" name="action" ><img src="img/dd.gif" alt="">
+                    <div class="cards" name="action"><img src="img/dd.gif" alt="">
                         <p class="title">New Series Action: Dan Da Dan
                         </p>
                         <div class="s_icon">
@@ -450,7 +514,7 @@
                         </div>
                     </div>
                     <div class="cards" name="drama"><img src="img/sv.gif" alt="">
-                        <p class="title">Drama Movie: A Silent Voice 
+                        <p class="title">Drama Movie: A Silent Voice
                         </p>
                         <div class="s_icon">
                             <p class="sub_t"><i class="fa-regular fa-clock"></i>2 days ago</p>
@@ -470,14 +534,16 @@
         <div class="credit">© Copyright 2024 | T&T's AniMotion
             <div>
                 <div class="icons">
-                    <a href="https://github.com/source8marie/AniMotions" class="fa-brands fa-github" target="_blank"></a>
+                    <a href="https://github.com/source8marie/AniMotions" class="fa-brands fa-github"
+                        target="_blank"></a>
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
 
     <script src="js/main.js"></script>
     <script src="js/series.js"></script>
+    <script src="js/wheel.js"></script>
 
 </body>
 
