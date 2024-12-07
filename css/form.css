@@ -183,9 +183,9 @@ form #open-popup-btn:hover {
 .popup {
     font-family: "Poppins";
     width: 35rem;
-    height: 28.5rem;
+    height: 25rem;
     padding: 3rem 2rem;
-    background: #ffdfb8f7;
+    background: #fffffff7;
     border-radius: 1rem;
     box-sizing: border-box;
     z-index: 4;
@@ -210,7 +210,7 @@ form #open-popup-btn:hover {
     margin: 0.5rem 0rem;
     width: 5rem;
     height: 5rem;
-    border: 0.2rem solid #250424;
+    border: 0.2rem solid #14b72d;
     text-align: center;
     display: inline-block;
     border-radius: 50%;
@@ -219,20 +219,20 @@ form #open-popup-btn:hover {
 
 .popup .icon i.fa {
     font-size: 3rem;
-    color: #180317;
+    color: #14b72d;
     padding: 0;
 }
 
 .popup .title {
-    font-family: cursive;
+    font-family: 'Roboto';
     margin: 0.5rem 0rem;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #480241;
+    color: #000000;
 }
 
 .popup .desc {
-    color: #ff89fa;
+    color: #000000;
     font-size: 1.5rem;
     padding: 0.5rem;
 }
@@ -245,7 +245,7 @@ form #open-popup-btn:hover {
     padding: 1rem 2rem;
     background: #ffffff;
     color: var(--orange);
-    border: 0.1rem solid var(--orange);
+    border: 0.1rem solid #000000;
     font-size: 1.5rem;
     font-weight: 500;
     outline: none;
@@ -257,7 +257,7 @@ form #open-popup-btn:hover {
 
 .popup .dismiss-btn button:hover {
     color: #ffffff;
-    background: var(--orange);
+    background: #333333f7;
     box-shadow: var(--shadow);
 }
 

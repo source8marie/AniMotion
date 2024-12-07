@@ -274,8 +274,8 @@ section {
     font-size: 1.3rem;
     width: 100%;
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.8);
-    border: 2px solid #ffffff;
+    background: linear-gradient(90deg, #6a0572, #a4508b);
+    box-shadow: 0 0 15px rgba(164, 80, 139, 0.6);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: all 0.3s;
@@ -284,7 +284,8 @@ section {
 
 .sub_con2 .load_more:hover {
     color: #ffffff;
-    background: #b200ab;
+    background: linear-gradient(90deg, #a4508b, #ff007f);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
 }
 
 .stats {
