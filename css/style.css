@@ -175,11 +175,6 @@ header .navbar span i {
     color: var(--orange);
 } */
 
-header .navbar span:hover .search {
-    background: #fff1e6;
-    transform: scale(1.2);
-}
-
 header .navbar span:hover i {
     transform: scale(1.2);
 }
@@ -975,6 +970,7 @@ html.page-transition.fade-in {
         border-radius: 2rem;
         background: #ff006f;
         transition: width 0.6s ease;
+        top: -1.5rem;
     }
 
     header .navbar a:hover > span,
@@ -1017,40 +1013,6 @@ html.page-transition.fade-in {
         right: 2rem;  /* Menu button on the right */
         top: 3rem;    /* Adjust the vertical alignment */
         z-index: 1000; /* Ensure it's on top */
-    }
-
-    header .search-icon {
-        position: absolute;
-        left: 1rem;  /* Search icon on the left */
-        top: 3rem;   /* Align vertically with the menu button */
-        cursor: pointer;
-        z-index: 1000;
-    }
-
-    header .search-bar {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 5rem;  /* Just below the header */
-        width: 100%;
-        background-color: #fff;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: opacity 0.3s ease-in-out;
-        z-index: 999;
-    }
-
-    header .search-bar input {
-        width: 100%;
-        padding: 0.8rem;
-        font-size: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-    }
-
-    header .search-bar.active {
-        display: block;
-        opacity: 1;
     }
 
     header {
@@ -1130,14 +1092,6 @@ html.page-transition.fade-in {
 
     header #toggler:checked ~ .navbar {
         clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-    }
-
-    header .navbar .search {
-        background: #ffeae0;
-    }
-
-    header .navbar .search:hover {
-        transform: scale(1.1);
     }
 
     .search::placeholder {
