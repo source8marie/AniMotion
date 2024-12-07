@@ -20,6 +20,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <button type="button" class="btn_up" id="btn_up">
@@ -30,22 +31,22 @@
     <header class="head">
         <input type="checkbox" id="toggler">
         <label for="toggler" class="fas fa-bars"></label>
-    
+
         <a href="#" class="logo">
             <img src="img/animotionhdr1.png" alt="T&T's AniMotion Logo">
         </a>
-    
+
         <nav class="navbar" id="navbar">
-            <a href="index.html" >Home<span></span></a>
+            <a href="index.html">Home<span></span></a>
             <a href="series.html">Series<span></span></a>
             <a href="movies.html">Movies<span></span></a>
             <a href="contact.html">Contact Us<span></span></a>
-            
+
             <div class="search-container">
                 <input type="text" placeholder="Search.." class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-    
+
             <!-- Account button with hover dropdown (No link now) -->
             <div class="account-container">
                 <a class="account-btn">
@@ -57,7 +58,7 @@
                     <a href="index-login.html">Log Out</a>
                 </div>
             </div>
-            
+
         </nav>
     </header>
 
@@ -68,12 +69,12 @@
                 <h1 class="page_title">
                     <i class="bi bi-person-circle icon-large"></i> Guest Account
                 </h1>
-                <div class="divider"></div>
-                <p class="joined-date" style="font-size: 1.2rem; color: var(--joined-text-color); margin-top: 10px; padding-left: 10px; border-bottom: 1px solid var(--joined-border-color); padding-bottom: 5px;">
-                    <strong>Joined date:</strong> 
-                </p>                            
+                <p class="joined-date"
+                    style="font-size: 1.2rem; color: var(--joined-text-color); margin-top: 10px; padding-left: 10px; border-bottom: 1px solid var(--joined-border-color); padding-bottom: 5px;">
+                    <strong>Joined date: December 25, 2025</strong>
+                </p>
                 <textarea class="bio-input" placeholder="Type your bio here..."></textarea>
-    
+
                 <!-- Stats Section -->
                 <div class="stats">
                     <div class="stat-item">
@@ -89,7 +90,7 @@
                         <p>0.00</p>
                     </div>
                 </div>
-
+                <!--
                 <div class="category-buttons">
                     <button class="category-button">Watching</button>
                     <button class="category-button">Planning</button>
@@ -98,24 +99,66 @@
                     <button class="category-button">Paused</button>
                     <button class="category-button">Dropped</button>
                 </div>
+                -->
             </div>
-
+        </div>
+        <div class="popular2">
+            <div class="tabs">
+                <div class="tab2" id="watching-tab">
+                    <h3 class="pop2">Watching</h3>
+                </div>
+                <hr class="divider2">
+                <div class="tab2" id="planning-tab">
+                    <h3 class="pop2">Planning</h3>
+                </div>
+                <hr class="divider2">
+                <div class="tab2" id="completed-tab">
+                    <h3 class="pop2">Completed</h3>
+                </div>
+                <hr class="divider2">
+                <div class="tab2" id="re-watching-tab">
+                    <h3 class="pop2">Re-watching</h3>
+                </div>
+                <hr class="divider2">
+                <div class="tab2" id="paused-tab">
+                    <h3 class="pop2">Paused</h3>
+                </div>
+                <hr class="divider2">
+                <div class="tab2" id="dropped-tab">
+                    <h3 class="pop2">Dropped</h3>
+                </div>
+            </div>
         </div>
     </section>
-    
-   
-    
-    
+
+
+    <!-- JavaScript -->
+    <script>
+        // Add event listeners to all the tabs
+        const tabs = document.querySelectorAll('.tab2');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove "selected" class from all tabs
+                tabs.forEach(t => t.classList.remove('selected'));
+
+                // Add "selected" class to the clicked tab
+                tab.classList.add('selected');
+            });
+        });
+    </script>
+
 
     <!-- Footer -->
     <section class="footer">
         <div class="credit">© Copyright 2024 | T&T's AniMotion
             <div>
                 <div class="icons">
-                    <a href="https://github.com/source8marie/AniMotions" class="fa-brands fa-github" target="_blank"></a>
+                    <a href="https://github.com/source8marie/AniMotions" class="fa-brands fa-github"
+                        target="_blank"></a>
                 </div>
             </div>
-        </div>        
+        </div>
     </section>
 
     <script src="js/main.js"></script>

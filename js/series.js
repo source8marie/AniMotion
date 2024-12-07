@@ -18,7 +18,6 @@ for (let i = 10; i < boxes.length; i++) {
 }
 
 
-
 // add event listener to load button
 loadBtn.addEventListener('click', () => {
   // show the next two cards
@@ -57,3 +56,4 @@ if (window.matchMedia("(max-width: 580px)").matches) {
 }
 
 ////
+

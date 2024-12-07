@@ -30,6 +30,13 @@ section {
     font-family: 'Poppins';
 }
 
+.page_title i {
+    margin-right: 10px;  
+    vertical-align: sub;  
+    font-size: 7rem;  
+}
+
+
 .content2 {
     padding-top: 12rem;
     display: flex;
@@ -147,24 +154,21 @@ section {
     padding: 0.9rem 1.5rem;
     margin-top: 1rem;
     font-size: 1.1rem;
-    width: auto;
-    background: var(--orange);
+    width: 90px;
+    background: #9d00d1;
     color: #ffffff;
     border-radius: 0.3rem;
     display: inline-block;
-    box-shadow: var(--shadow);
-    border: none;
-    outline: none;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff;
+    outline: none; 
 }
 
 .img_details .btn_read:hover {
-    background: #b200ab;
-}
-
-.img_details .btn_read i {
-    font-size: 1rem;
-    padding-left: 0.8rem;
-    color: #fff;
+    background: #282828; 
+    border-radius: 0.3rem;
+    border: 1px solid #9d00d1;
+    color: #9d00d1;
 }
 
 .popular {
@@ -281,6 +285,83 @@ section {
 .sub_con2 .load_more:hover {
     color: #ffffff;
     background: #b200ab;
+}
+
+.stats {
+    background: #181818;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.813);
+    display: flex;
+    justify-content: space-between; 
+    height: 75px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 0 20px; 
+    margin-top: 10px
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 2.5rem; 
+    color: #9d00d1;
+}
+
+.stat-item p:first-child {
+    font-size: 2rem; 
+    color: #ffffff;
+    font-weight: bold; 
+}
+
+.popular2 {
+    flex-shrink: 1;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.813);
+    width: 33.33333%;
+    height: fit-content;
+    margin-left: 1.5rem;
+    border-radius: 15px;
+    float: left;
+    box-shadow: 0 0 30px rgba(106, 5, 114, 0.8);
+    position: sticky;
+    top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.tabs {
+    width: 100%;
+}
+
+.tab2 {
+    width: 100%;
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+}
+
+.tab2:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.tab2.selected {
+    color: #9d00d1; 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.divider2 {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.813);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .footer {

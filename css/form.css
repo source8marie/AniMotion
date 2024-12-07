@@ -165,8 +165,10 @@ form #open-popup-btn {
 }
 
 form #open-popup-btn:hover {
-    background: #5a0052;
-    color: #fff;
+    background: #282828; 
+    border-radius: 0.3rem;
+    border: 1px solid #9d00d1;
+    color: #9d00d1;
 }
 
   .center {

@@ -572,23 +572,20 @@ h5 .text-xl {
     margin-top: 1rem;
     font-size: 1.1rem;
     width: 90px;
-    background: #b200ab;
+    background: #9d00d1;
     color: #ffffff;
     border-radius: 0.3rem;
     display: inline-block;
     box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
-    border: none;
+    border: 1px solid #ffffff;
     outline: none; 
 }
 
 .content .head_content .read-more:hover {
-    background: #470044; 
-}
-
-.content .head_content .read-more i {
-    font-size: 1rem;
-    padding-left: 0.8rem;
-    color: #fff;
+    background: #282828; 
+    border-radius: 0.3rem;
+    border: 1px solid #9d00d1;
+    color: #9d00d1;
 }
 
 .box_container {
@@ -1469,28 +1466,7 @@ html.page-transition.fade-in {
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); 
 }
 
-.stats {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 20px;
-}
-
-.stat-item {
-    text-align: center;
-    margin: 0 20px; 
-}
-
-.stat-item p {
-    margin: 0;
-    font-size: 1.5rem; 
-}
-
-.stat-item p:first-child {
-    font-size: 1.2rem; 
-    font-weight: bold; 
-}
-
-/* Additional styles for the button grid */
+/* Additional styles for the button grid 
 .category-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1513,6 +1489,7 @@ html.page-transition.fade-in {
 .category-button:hover {
     background-color: #211e46;
 }
+*/
 
 @media (max-width: 768px) {
     .category-buttons {
