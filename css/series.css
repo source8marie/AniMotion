@@ -196,7 +196,7 @@ section {
     font-family: 'Poppins';
 }
 
-.divider {
+.divider3 {
     border: none;
     border-top: 2px solid #6a0572;
     /* Adjust color and thickness */
@@ -347,10 +347,13 @@ section {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Poppins';
+    border-radius: 10px;
 }
 
 .tab2:hover {
     background-color: rgba(255, 255, 255, 0.2);
+    color: #9d00d1;
+    border-radius: 10px;
 }
 
 .tab2.selected {
@@ -358,17 +361,18 @@ section {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/*
 .divider2 {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.813);
     width: 90%;
     margin: 0 auto;
 }
+*/
 
 .footer {
     margin-top: 6.5rem;
 }
-
 
 
 @media (max-width:1190px) {
