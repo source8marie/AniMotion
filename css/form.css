@@ -183,7 +183,7 @@ form #open-popup-btn:hover {
 .popup {
     font-family: "Poppins";
     width: 35rem;
-    height: 25rem;
+    height: 28rem;
     padding: 3rem 2rem;
     background: #fffffff7;
     border-radius: 1rem;
@@ -257,7 +257,7 @@ form #open-popup-btn:hover {
 
 .popup .dismiss-btn button:hover {
     color: #ffffff;
-    background: #333333f7;
+    background: #c70000f7;
     box-shadow: var(--shadow);
 }
 

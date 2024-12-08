@@ -152,3 +152,49 @@ canvas {
     background: linear-gradient(90deg, #a4508b, #ff007f);
     box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
 }
+
+
+/* Media Queries */
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .logo img {
+        height: 50px; /* Adjust for smaller screens */
+    }
+    .tab {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Tablet Styles (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    .logo img {
+        height: 65px;
+    }
+    .tab {
+        font-size: 1.8rem;
+    }
+}
+
+/* Desktop Styles (min-width: 1025px) */
+@media (min-width: 1025px) {
+    .navbar {
+        justify-content: space-between;
+    }
+    .logo img {
+        height: 80px;
+    }
+    .tab {
+        font-size: 2rem;
+    }
+}
