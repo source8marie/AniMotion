@@ -30,6 +30,7 @@ The series.css is designed to provide a visually appealing and easy-to-navigate 
 ```
 The grid layout adapts based on available space, ensuring that each series item is evenly distributed with consistent gaps.
 
+
 ### Typography
 ```css
 .series-title {
@@ -39,7 +40,8 @@ The grid layout adapts based on available space, ensuring that each series item 
     margin-bottom: 10px;
 }
 ```
-Description: The series title uses a bold and modern font with a larger size for prominence.
+The series title uses a bold and modern font with a larger size for prominence.
+
 
 ### Pagination Controls
 ```css
@@ -62,7 +64,8 @@ Description: The series title uses a bold and modern font with a larger size for
     background-color: #0056b3;
 }
 ```
-Description: Pagination buttons are styled with clear colors and hover effects to improve user interaction.
+Pagination buttons are styled with clear colors and hover effects to improve user interaction.
+
 
 ### Media Queries for Responsive Design
 ```css
@@ -86,6 +89,6 @@ Description: Pagination buttons are styled with clear colors and hover effects t
     }
 }
 ```
-Description: Adjusts the grid layout and text sizes for smaller screen sizes to ensure the page remains legible and well-organized.
+Adjusts the grid layout and text sizes for smaller screen sizes to ensure the page remains legible and well-organized.
 
 
