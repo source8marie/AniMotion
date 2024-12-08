@@ -289,6 +289,9 @@ form #open-popup-btn:hover {
 }
 
 
+
+/* Media Queries */
+
 @media (max-width:1152px) {
     form {
         font-size: 1.3rem;
