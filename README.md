@@ -64,28 +64,6 @@ After logging in, users are redirected to the **Anime Spin the Wheel**, where th
   - PHP/Node.js for user authentication and data handling  
   - Database: MySQL/SQLite for storing user data and anime information
 
-## Database Schema (Optional)
-
-- **Users Table**  
-  | Column       | Type    | Description                          |
-  |--------------|---------|--------------------------------------|
-  | id           | INT     | Unique user ID                      |
-  | username     | VARCHAR | User's display name                  |
-  | email        | VARCHAR | User's email address                 |
-  | password     | VARCHAR | Hashed password                      |
-  | profile_image| VARCHAR | URL to user's profile image          |
-  | favorite_anime| VARCHAR| User's favorite anime title         |
-
-- **Anime Table**  
-  | Column     | Type     | Description                          |
-  |------------|----------|--------------------------------------|
-  | id         | INT      | Unique anime ID                     |
-  | title      | VARCHAR  | Title of the anime                  |
-  | genre      | VARCHAR  | Genre of the anime                  |
-  | description| TEXT     | Short description of the anime      |
-  | type       | VARCHAR  | Type of content (movie/series)      |
-  | video_url  | VARCHAR  | URL to the streaming video          |
-
 ## Security Features
 
 - **Password Hashing**: All user passwords are securely hashed.  
@@ -104,10 +82,3 @@ After logging in, users are redirected to the **Anime Spin the Wheel**, where th
 - **Anime Discussions**: Forums or comment sections for users to discuss their favorite anime.
 
 ---
-
-## Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/aniMotions.git
