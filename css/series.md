@@ -1,6 +1,6 @@
 # Series Page Styling Documentation
 
-This document outlines the CSS used for styling the Series page, including its layout, typography, and responsive design.
+This document outlines the CSS used for styling the Series page, Movies page, Contact page, and Account page, including its layout, typography, and responsive design.
 
 ## Overview
 
