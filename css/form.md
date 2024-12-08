@@ -5,10 +5,10 @@ This document outlines the CSS used for styling a web application, including its
 ## Fonts Import
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300&display=swap');
-Styling Classes and Selectors
-.main_con2 .description
-css
-Copy code
+```
+
+## Styling Classes and Selectors 
+```css
 .main_con2 .description {
     display: flex;
     padding: 2rem;
@@ -16,9 +16,10 @@ Copy code
     border-color: #5a0052;
     border-radius: 1rem;
 }
-Text Styles within .main_con2
-css
-Copy code
+```
+
+## Text Styles within .main_con2
+```css
 .main_con2 p {
     float: right;
     margin-left: 2rem;
@@ -37,10 +38,12 @@ Copy code
     user-select: none;
     pointer-events: none;
 }
-Form Styling
-General Form Styling
-css
-Copy code
+```
+---
+
+## Form Styling
+### General Form Styling
+```css
 form {
     font-family: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif';
     margin-top: 4rem;
@@ -51,10 +54,10 @@ form {
     flex-wrap: wrap;
     line-height: 1.4;
 }
-Input Container Styles
-#name Input
-css
-Copy code
+```
+
+### Input Container Styles
+```css
 form .input_cont #name {
     flex: 1 1 100%;
     width: 100%;
@@ -71,19 +74,22 @@ form .input_cont #name {
     font-size: 1.3rem;
     color: var(--primary_color);
 }
-Hover Effects
-css
-Copy code
+```
+
+#### Hover Effects
+```css
 form #name:hover,
 form #email:hover,
 form #subject:hover,
 form #message:hover {
     border: 0.1rem solid #9d00d1;
 }
-Popup Styling
-Base Popup
-css
-Copy code
+```
+---
+
+## Popup Styling
+### Base Popup
+```css
 .popup {
     font-family: "Poppins";
     width: 35rem;
@@ -102,19 +108,22 @@ Copy code
         top 1000ms ease-in-out,
         transform 1000ms ease-in-out;
 }
-Active Popup
-css
-Copy code
+```
+
+### Active Popup
+```css
 .popup.active {
     opacity: 1;
     top: 50%;
     transform: translate(-100%, -50%) scale(1);
     transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
 }
-Media Queries
-For Width ≤ 1152px
-css
-Copy code
+```
+---
+
+## Media Queries
+### For Width ≤ 1152px
+```css
 @media (max-width:1152px) {
     form {
         font-size: 1.3rem;
@@ -127,9 +136,10 @@ Copy code
         gap: 1rem;
     }
 }
-For Width ≤ 990px
-css
-Copy code
+```
+
+### For Width ≤ 990px
+```css
 @media (max-width:990px) {
     .popup {
         transform: translate(-50%, -50%) scale(0.5);
@@ -138,7 +148,4 @@ Copy code
         transform: translate(-50%, -50%) scale(1);
     }
 }
-Notes
-This documentation includes media queries for responsive design.
-Customize variables like --primary_color for theme consistency.
-Ensure to test the hover and transition effects on different browsers.
+```
