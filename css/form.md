@@ -1,13 +1,24 @@
-# Styling Documentation
+# Contact Page Form Styling Documentation
 
-This document outlines the CSS used for styling a web application, including its components and responsive design.
+This document outlines the CSS used for styling the Contact page form, including its components, form layout, popup modal, and responsive design.
 
-## Fonts Import
+## Overview
+The `form.css` is designed to style a Contact page, providing a modern, user-friendly experience. It includes styling for form elements, a popup modal for feedback, and ensures the layout is responsive across various screen sizes.
+
+## Key Features
+- **Flexible Form Layout**: Utilizes flexbox to create a responsive and clean layout for form inputs.
+- **Popup Modal**: A modal that appears after form submission with smooth transitions.
+- **Responsive Design**: Adjusts form and modal elements for different screen sizes using media queries.
+
+## Styles Breakdown
+
+### Font Imports
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300&display=swap');
+
 ```
 
-## Styling Classes and Selectors 
+### Styling Classes and Selectors 
 ```css
 .main_con2 .description {
     display: flex;
@@ -18,7 +29,7 @@ This document outlines the CSS used for styling a web application, including its
 }
 ```
 
-## Text Styles within .main_con2
+### Text Styles within .main_con2
 ```css
 .main_con2 p {
     float: right;
@@ -41,7 +52,7 @@ This document outlines the CSS used for styling a web application, including its
 ```
 ---
 
-## Form Styling
+### Form Styling
 #### General Form Styling
 ```css
 form {
@@ -87,7 +98,7 @@ form #message:hover {
 ```
 ---
 
-## Popup Styling
+### Popup Styling
 #### Base Popup
 ```css
 .popup {
@@ -121,7 +132,7 @@ form #message:hover {
 ```
 ---
 
-## Media Queries
+### Media Queries
 #### For Width ≤ 1152px
 ```css
 @media (max-width:1152px) {
