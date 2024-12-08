@@ -6,13 +6,14 @@
 Ensures the document is interpreted as HTML5.
 
 ```
-##2. HTML Element
+## 2. HTML Element
 ```
 <html lang="en">
+```
 Defines the root of the document and sets the language to English.
 ```
-
-##3. Head Section
+```
+## 3. Head Section
 ```
 <head>
     <meta charset="UTF-8">
@@ -43,16 +44,16 @@ Defines the root of the document and sets the language to English.
 Defines the document's metadata, links to external stylesheets, and includes inline styles for the page background.
 ```
 ```
-##4. Body Section
-```
-Back to Top Button
+## 4. Body Section
 
+Back to Top Button
+```
 <button type="button" class="btn_up" id="btn_up">
     <i class="fa-solid fa-circle-up"></i>
 </button>
-
+```
 Adds a button to scroll back to the top of the page.
-
+```
 <header class="head">
     <input type="checkbox" id="toggler">
     <label for="toggler" class="fas fa-bars"></label>
@@ -85,11 +86,10 @@ Adds a button to scroll back to the top of the page.
         </div>
     </div>
 </header>
+```
 Includes the logo, navigation links, search bar, and account menu.
+```
 
-Contact Form Section
-html
-Copy code
 <section class="contact">
     <div class="form-container">
         <h2>Contact Us</h2>
@@ -101,8 +101,9 @@ Copy code
         </form>
     </div>
 </section>
+```
 This section creates a contact form for users to submit their name, email, and message.
-
+```
 
 <section class="canvas-section">
     <h3>Interactive Canvas</h3>
@@ -120,7 +121,7 @@ A canvas element is added here for rendering graphics or animations.
     </div>
 </section>
 ```
-##5. External JavaScript Files
+## 5. External JavaScript Files
 ```
 <script src="js/main.js"></script>
 <script src="js/series.js"></script>
