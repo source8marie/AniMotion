@@ -42,7 +42,7 @@ This document outlines the CSS used for styling a web application, including its
 ---
 
 ## Form Styling
-### General Form Styling
+#### General Form Styling
 ```css
 form {
     font-family: 'system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif';
@@ -56,7 +56,7 @@ form {
 }
 ```
 
-### Input Container Styles
+#### Input Container Styles
 ```css
 form .input_cont #name {
     flex: 1 1 100%;
@@ -88,7 +88,7 @@ form #message:hover {
 ---
 
 ## Popup Styling
-### Base Popup
+#### Base Popup
 ```css
 .popup {
     font-family: "Poppins";
@@ -110,7 +110,7 @@ form #message:hover {
 }
 ```
 
-### Active Popup
+#### Active Popup
 ```css
 .popup.active {
     opacity: 1;
@@ -122,7 +122,7 @@ form #message:hover {
 ---
 
 ## Media Queries
-### For Width ≤ 1152px
+#### For Width ≤ 1152px
 ```css
 @media (max-width:1152px) {
     form {
@@ -138,7 +138,7 @@ form #message:hover {
 }
 ```
 
-### For Width ≤ 990px
+#### For Width ≤ 990px
 ```css
 @media (max-width:990px) {
     .popup {
