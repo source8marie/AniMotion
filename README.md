@@ -1,6 +1,6 @@
 # T&T AniMotions: Anime Streaming Site
 
-AniMotions is an online anime streaming platform that provides users with access to a wide selection of anime movies and series. The platform features an exciting **Anime Spin the Wheel**, a fun way for users to get random anime recommendations upon logging in.
+AniMotions is an online anime streaming platform created by Thomas Joseph Y. Almorin and Trisha Marie R. Dumagsa that provides users with access to a wide selection of anime movies and series. The platform features an exciting **Anime Spin the Wheel**, a fun way for users to get random anime recommendations upon logging in.
 
 ## Key Features
 
