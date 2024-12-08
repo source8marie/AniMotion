@@ -15,10 +15,9 @@ The `form.css` is designed to style a Contact page, providing a modern, user-fri
 ### Font Imports
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@300&display=swap');
-
 ```
 
-### Styling Classes and Selectors 
+## Styling Classes and Selectors 
 ```css
 .main_con2 .description {
     display: flex;
@@ -29,7 +28,7 @@ The `form.css` is designed to style a Contact page, providing a modern, user-fri
 }
 ```
 
-### Text Styles within .main_con2
+## Text Styles within .main_con2
 ```css
 .main_con2 p {
     float: right;
@@ -52,7 +51,7 @@ The `form.css` is designed to style a Contact page, providing a modern, user-fri
 ```
 ---
 
-### Form Styling
+## Form Styling
 #### General Form Styling
 ```css
 form {
@@ -98,7 +97,7 @@ form #message:hover {
 ```
 ---
 
-### Popup Styling
+## Popup Styling
 #### Base Popup
 ```css
 .popup {
@@ -132,7 +131,7 @@ form #message:hover {
 ```
 ---
 
-### Media Queries
+## Media Queries
 #### For Width ≤ 1152px
 ```css
 @media (max-width:1152px) {
