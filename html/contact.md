@@ -5,16 +5,14 @@
 <!DOCTYPE html>
 Ensures the document is interpreted as HTML5.
 
-2. HTML Element
-html
-Copy code
+
+##2. HTML Element
+
 <html lang="en">
 Defines the root of the document and sets the language to English.
 
-3. Head Section
-Metadata and Styles
-html
-Copy code
+##3. Head Section
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +40,7 @@ Copy code
 </head>
 Defines the document's metadata, links to external stylesheets, and includes inline styles for the page background.
 
-4. Body Section
+##4. Body Section
 Back to Top Button
 html
 Copy code
@@ -104,18 +102,14 @@ Copy code
 </section>
 This section creates a contact form for users to submit their name, email, and message.
 
-Canvas Section
-html
-Copy code
+
 <section class="canvas-section">
     <h3>Interactive Canvas</h3>
     <canvas id="myCanvas" width="500" height="500"></canvas>
 </section>
 A canvas element is added here for rendering graphics or animations.
 
-Footer
-html
-Copy code
+
 <section class="footer">
     <div class="credit">
         <p>© 2024 T&T's AniMotion. All rights reserved.</p>
@@ -124,11 +118,9 @@ Copy code
         </div>
     </div>
 </section>
-Displays copyright information and a link to the GitHub repository.
 
-5. External JavaScript Files
-html
-Copy code
+##5. External JavaScript Files
+
 <script src="js/main.js"></script>
 <script src="js/series.js"></script>
 <script>
