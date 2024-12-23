@@ -2,16 +2,6 @@
 
 This CSS file provides the styling for the "Anime Roulette" feature, which is displayed on the homepage. It includes styles for the layout, buttons, wheel container, modal, and various animations, including responsiveness for different screen sizes.
 
-## Table of Contents
-
-1. [General Styles](#general-styles)
-2. [Button Styles](#button-styles)
-3. [Modal Styles](#modal-styles)
-4. [Wheel Container](#wheel-container)
-5. [Arrow and Result Text](#arrow-and-result-text)
-6. [Animations](#animations)
-7. [Media Queries](#media-queries)
-
 ## General Styles
 
 ### `.wheel-wrapper`
