@@ -1,4 +1,4 @@
-# Anime Roulette Wheel CSS Styling Documentation
+# Anime Roulette Wheel Styling Documentation
 
 This CSS file provides the styling for the "Anime Roulette" feature, which is displayed on the homepage. It includes styles for the layout, buttons, wheel container, modal, and various animations, including responsiveness for different screen sizes.
 
