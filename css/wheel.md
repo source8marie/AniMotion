@@ -14,12 +14,12 @@ This class centers the "Anime Roulette" button on the page.
     margin: 20px 0;
     width: 100%;
 }
-Button Styles
+```
+
+## Button Styles
 .wheel-trigger-button
 This class styles the main button that triggers the anime roulette.
-
-css
-Copy code
+```css
 .wheel-trigger-button {
     background: linear-gradient(90deg, #6a0572, #a4508b);
     color: white;
@@ -34,20 +34,21 @@ Copy code
     cursor: pointer;
     width: 350px;
 }
-Hover Effect for Button
-css
-Copy code
+```
+
+## Hover Effect for Button
+```css
 .wheel-trigger-button:hover {
     background: linear-gradient(90deg, #a4508b, #ff007f);
     box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
     transform: scale(1.1);
 }
-Modal Styles
+```
+
+## Modal Styles
 .wheel-modal
 This class styles the modal background that appears when the button is clicked.
-
-css
-Copy code
+```css
 .wheel-modal {
     display: none;
     position: fixed;
@@ -60,11 +61,11 @@ Copy code
     justify-content: center;
     align-items: center;
 }
+```
+
 .wheel-close-button
 The close button inside the modal.
-
-css
-Copy code
+```css
 .wheel-close-button {
     position: absolute;
     top: 10px;
@@ -74,12 +75,12 @@ Copy code
     color: #ffffff;
     background: rgba(0, 0, 0, 0.153);
 }
-Wheel Container
+```
+
+## Wheel Container
 .wheel-container
 This class styles the container that holds the wheel.
-
-css
-Copy code
+```css
 .wheel-container {
     position: relative;
     margin: 20px auto;
@@ -88,22 +89,22 @@ Copy code
     max-width: 700px; /* Max width for better control */
     max-height: 700px; /* Max height for better control */
 }
-Canvas Styling
-The wheel is drawn inside a canvas element, styled with this:
+```
 
-css
-Copy code
+## Canvas Styling
+The wheel is drawn inside a canvas element, styled with this:
+```css
 canvas {
     border: 5px solid #333;
     border-radius: 50%;
     background-color: #fff;
 }
-Arrow and Result Text
+```
+
+## Arrow and Result Text
 .wheel-arrow
 The arrow pointing to the wheel is styled with the following:
-
-css
-Copy code
+```css
 .wheel-arrow {
     position: absolute;
     top: 50%;
@@ -117,11 +118,11 @@ Copy code
     filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
     transition: filter 0.3s ease-in-out;
 }
+```
+
 .anime-result-text
 This class styles the result text that appears after the wheel is spun.
-
-css
-Copy code
+```css
 .anime-result-text {
     position: absolute;
     top: 50%;
@@ -139,12 +140,11 @@ Copy code
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-Animations
+```
+## Animations
 Falling Animation
 This animation is applied to the result text when the wheel stops.
-
-css
-Copy code
+```css
 .falling-animation {
     animation: fall 0.5s ease-in-out forwards;
 }
@@ -160,12 +160,13 @@ Copy code
         opacity: 1;
     }
 }
-Media Queries
+```
+
+## Media Queries
 This CSS includes responsive design adjustments to ensure the feature looks great on mobile, tablet, and desktop screens.
 
 Mobile Styles (max-width: 767px)
-css
-Copy code
+```css
 @media screen and (max-width: 767px) {
     .wheel-wrapper {
         flex-direction: column;
@@ -200,9 +201,10 @@ Copy code
         font-size: 14px;
     }
 }
+```
+
 Tablet Styles (max-width: 1024px)
-css
-Copy code
+```css
 @media screen and (max-width: 1024px) {
     .wheel-wrapper {
         flex-direction: column;
@@ -237,9 +239,10 @@ Copy code
         font-size: 15px;
     }
 }
+```
+
 Desktop Styles (min-width: 1025px)
-css
-Copy code
+```css
 @media screen and (min-width: 1025px) {
     .wheel-wrapper {
         margin: 20px auto;
@@ -273,3 +276,4 @@ Copy code
         font-size: 16px;
     }
 }
+```
