@@ -1,4 +1,4 @@
-# T&T's AniMotion Contact Us Page with Canvas
+# T&T's AniMotion Contact Us Page 
 
 ## 1. Document Type Declaration
 ```html
