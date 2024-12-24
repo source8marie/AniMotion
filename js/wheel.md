@@ -1,4 +1,4 @@
-# Documentation for 'wheel.js' 
+# Documentation for `wheel.js` 
 
 ## Overview
 The `wheel.js` script enables the functionality for an anime roulette picker feature. It includes a graphical wheel with selectable anime titles that users can spin to randomly choose a segment. The functionality includes:
