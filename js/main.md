@@ -2,6 +2,8 @@
 
 This documentation provides a detailed explanation of the functionality implemented in the `main.js` file.
 
+---
+
 ## Description Toggle
 
 ### Purpose:
