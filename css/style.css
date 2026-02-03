@@ -62,15 +62,15 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+    width: 7.5rem;
+    height: 7.5rem;
     cursor: pointer;
     opacity: 0;
     transition: all 0.3s ease;
 }
 
 .btn_up i {
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: var(--primary-purple);
 }
 
@@ -215,7 +215,7 @@ header.hidden {
     right: 0;
     background: rgba(45, 27, 78, 0.95);
     backdrop-filter: blur(30px);
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid var(--glass-border);
     border-radius: 1.2rem;
     padding: 1rem;
     min-width: 18rem;

@@ -55,5 +55,3 @@ if (window.matchMedia("(max-width: 580px)").matches) {
   img_cont1.style.marginTop = '0';
 }
 
-////
-

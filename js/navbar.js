@@ -1,4 +1,5 @@
-// js/navbar.js
+// for navbar
+
 function loadNavbar() {
     const navbarHTML = `
         <header class="head">

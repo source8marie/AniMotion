@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+    <title>Login - T&T's AniMotion</title>
+    <link rel="icon" href="img/T&T_Flav.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <style>
-        /* Reset default margins and padding */
+        :root {
+            --primary-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --text-light: #ffffff;
+            --text-muted: rgba(255, 255, 255, 0.8);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,136 +24,223 @@
         }
 
         body {
+            font-family: 'Poppins', sans-serif;
+            background: url('img/animotionbg.png') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-light);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1d011d, #2b0032 50%, #400060);
-            color: white;
-            overflow: hidden;
-            padding: 1rem;
-            background: url('img/animotionbg.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Container for the profile */
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid #6a0572;
-            border-radius: 15px;
             padding: 2rem;
-            width: 90%;
-            max-width: 400px;
-            box-shadow: 0 0 30px rgba(106, 5, 114, 0.8);
+            overflow: hidden;
+            position: relative;
+            transition: backdrop-filter 0.6s ease; /* Smooth blur transition */
         }
 
-        /* Styling for profile image */
-        .profile-image img {
-            width: 150px;
-            height: 150px;
+        /* Ambient Glow Particles */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* State when wallpaper is being viewed */
+        body.view-mode {
+            backdrop-filter: blur(0px) !important;
+            -webkit-backdrop-filter: blur(0px) !important;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 20.5rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px); 
+            border: 1px solid var(--glass-border);
+            border-radius: 2rem;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .login-container.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+
+        /* Bottom Left View Button */
+        .view-wallpaper-btn {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            z-index: 100;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            width: 3.5rem;
+            height: 3.5rem;
             border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #6a0572;
-            animation: glow 2s infinite;
-        }
-
-        /* Neon glow animation */
-        @keyframes glow {
-            0% {
-                box-shadow: 0 0 10px #6a0572;
-            }
-
-            50% {
-                box-shadow: 0 0 30px #a4508b;
-            }
-
-            100% {
-                box-shadow: 0 0 10px #6a0572;
-            }
-        }
-
-        /* Content styling */
-        .content h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2rem;
-            color: #ff9eff;
-            margin-bottom: 0.5rem;
-        }
-
-        .content h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.2rem;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 5px #ff9eff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: none;
         }
 
-        /* Buttons styling */
-        .buttons {
+        .view-wallpaper-btn:hover {
+            color: var(--text-light);
+            transform: scale(1.1);
+            background: none;
+        }
+
+        .logo-section {
+            margin-bottom: 2.2rem;
+        }
+
+        .logo-section img {
+            width: 13.5rem;
+            height: auto;
+            margin-bottom: 0.6rem;
+            filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.4));
+        }
+
+        .logo-section h1 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .logo-section p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        .button-group {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 0.9rem;
         }
 
-        .button {
-            background: linear-gradient(90deg, #6a0572, #a4508b);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
+        .btn-login, .btn-guest {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: all 0.3s ease;
-            text-align: center;
-            font-size: 1.1rem;
-            box-shadow: 0 0 15px rgba(164, 80, 139, 0.6);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
         }
 
-        .button:hover {
-            background: linear-gradient(90deg, #a4508b, #ff007f);
-            box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
-            transform: scale(1.1);
+        .btn-login {
+            background: var(--primary-purple);
+            color: var(--text-light);
         }
 
-        /* Responsive Design */
-        @media (max-width: 576px) {
-            .profile-image img {
-                width: 120px;
-                height: 120px;
-            }
+        .btn-login:hover {
+            background: var(--accent-pink);
+            transform: translateY(-2px);
+        }
 
-            .content h1 {
-                font-size: 1.5rem;
-            }
+        .btn-guest {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            color: var(--text-light);
+        }
 
-            .content h2 {
-                font-size: 1rem;
-            }
+        .btn-guest:hover {
+            background: rgba(139, 92, 246, 0.12);
+            border-color: var(--primary-purple);
+        }
 
-            .button {
-                padding: 0.6rem 1rem;
-                font-size: 1rem;
-            }
+        .signup-link {
+            margin-top: 1.8rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .signup-link a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        @media (max-width: 480px) {
+            .view-wallpaper-btn { bottom: 1rem; left: 1rem; width: 3rem; height: 3rem; }
+            .login-container { max-width: 88%; padding: 2.2rem 1.5rem; }
         }
     </style>
 </head>
+<body id="mainBody">
 
-<body>
-    <div class="container">
-        <div class="profile-image">
-            <img src="https://64.media.tumblr.com/8435493c8cb2357ff673394bae8d4c08/6a015978ff6e4646-bf/s500x750/f3c2f87433598a41ae186dae49b157010c2ead9b.gifv"
-                alt="Profile Image">
+    <button class="view-wallpaper-btn" onclick="toggleView(event)" id="viewBtn" title="Toggle UI">
+        <i class="fas fa-eye" id="viewIcon"></i>
+    </button>
+
+    <div class="login-container" id="loginCard">
+        <div class="logo-section">
+            <img src="img/animotionhdr1.png" alt="T&T's AniMotion Logo">
+            <h1>Welcome Back</h1>
+            <p>Choose how to continue</p>
         </div>
-        <div class="content">
-            <h1>T&T's AniMotion</h1>
-            <div class="buttons">
-                <a href="index.html" class="button">Log In as Guest</a>
-                <a href="account.html" class="button">Sign Up</a>
-                <p>Already have an account? <u> Click here.</u></p>
-            </div>
+
+        <div class="button-group">
+            <a href="index.html" class="btn-login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+            <a href="index.html" class="btn-guest">
+                <i class="fas fa-user-secret"></i> Continue as Guest
+            </a>
+        </div>
+
+        <div class="signup-link">
+            Don't have an account? <a href="account.html">Sign Up</a>
         </div>
     </div>
-</body>
 
+    <script>
+        const card = document.getElementById('loginCard');
+        const icon = document.getElementById('viewIcon');
+
+        function toggleView(event) {
+            event.stopPropagation();
+            const isHidden = card.classList.toggle('hidden');
+            
+            // Toggle icons between Eye and Eye-Slash
+            if (isHidden) {
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+    </script>
+</body>
 </html>
