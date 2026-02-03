@@ -89,7 +89,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    padding: 0.8rem 5%;
+    padding: 0.8rem 3%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,6 +99,12 @@ header {
     border-bottom: 1px solid var(--glass-border);
     transition: all 0.3s ease;
     height: 6rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 header.hidden {
@@ -207,15 +213,16 @@ header.hidden {
     position: absolute;
     top: 150%;
     right: 0;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 1rem;
+    background: rgba(45, 27, 78, 0.95);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 1.2rem;
     padding: 1rem;
-    min-width: 15rem;
+    min-width: 18rem;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(139, 92, 246, 0.1);
 }
 
 .account-container:hover .account-dropdown {
@@ -224,17 +231,26 @@ header.hidden {
 }
 
 .account-dropdown a {
-    display: block;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
     color: var(--text-light);
     text-decoration: none;
-    font-size: 1.4rem;
-    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-radius: 0.8rem;
     transition: all 0.3s ease;
 }
 
+.account-dropdown a i {
+    font-size: 1.8rem;
+    color: var(--text-light);
+    width: 2rem;
+}
+
 .account-dropdown a:hover {
-    background: var(--primary-purple);
+    background: rgba(139, 92, 246, 0.3);
 }
 
 #toggler,
@@ -253,7 +269,6 @@ header.hidden {
     gap: 0.5rem;
     cursor: pointer;
     padding: 1rem;
-    margin-right: 2rem;
     z-index: 1001;
 }
 
@@ -376,13 +391,14 @@ header.hidden {
 /* Hero Banner */
 .hero-banner {
     margin-top: 10rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     padding: 0 5%;
     position: relative;
 }
 
 .banner-slider {
-    height: 60vh;
+    height: 55vh;
+    min-height: 50rem;
     border-radius: 2rem;
     overflow: hidden;
 }
@@ -408,10 +424,11 @@ header.hidden {
 
 .banner-info {
     flex: 1;
-    padding: 5rem;
+    padding: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 6rem;
 }
 
 .banner-info h1 {
@@ -420,6 +437,9 @@ header.hidden {
     background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    min-height: 11rem;
+    display: flex;
+    align-items: center;
 }
 
 .banner-meta {
@@ -427,6 +447,7 @@ header.hidden {
     gap: 1.5rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    min-height: 4rem;
 }
 
 .banner-meta span {
@@ -435,6 +456,9 @@ header.hidden {
     border: 1px solid var(--glass-border);
     border-radius: 2rem;
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .rating {
@@ -450,11 +474,15 @@ header.hidden {
     line-height: 1.8;
     color: var(--text-gray);
     margin-bottom: 3rem;
+    min-height: 9rem;
+    max-height: 9rem;
+    overflow: hidden;
 }
 
 .banner-buttons {
     display: flex;
     gap: 2rem;
+    margin-top: auto;
 }
 
 .btn-primary,
@@ -471,13 +499,14 @@ header.hidden {
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink));
+    background: var(--primary-purple);
     color: var(--text-light);
 }
 
 .btn-primary:hover {
+    background: var(--accent-pink);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
 }
 
 .btn-secondary {
@@ -718,6 +747,9 @@ header.hidden {
     border: 1px solid var(--glass-border);
     border-radius: 2rem;
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .featured-description {
@@ -725,6 +757,17 @@ header.hidden {
     line-height: 1.8;
     color: var(--text-gray);
     margin-bottom: 3rem;
+}
+
+.featured-info .btn-primary {
+    background: var(--primary-purple);
+    color: var(--text-light);
+}
+
+.featured-info .btn-primary:hover {
+    background: var(--accent-pink);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
 }
 
 /* Genre Grid */
@@ -919,12 +962,23 @@ header.hidden {
         flex-direction: column;
     }
 
+        .banner-slider {
+        min-height: auto;
+    }
+
     .banner-info {
         padding: 3rem;
+        padding-top: 3rem;
     }
 
     .banner-info h1 {
         font-size: 3rem;
+        min-height: auto;
+    }
+
+    .banner-description {
+        min-height: auto;
+        max-height: none;
     }
 
     .featured-anime {

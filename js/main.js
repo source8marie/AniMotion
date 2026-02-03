@@ -1,3 +1,69 @@
+// Wait for navbar to load first
+document.addEventListener('DOMContentLoaded', () => {
+    // Sidebar Toggle
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const sidebarClose = document.getElementById('sidebar-close');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const sidebarTrigger = document.querySelector('.sidebar-trigger');
+
+    // Open sidebar
+    if (sidebarTrigger) {
+        sidebarTrigger.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    // Close sidebar
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close sidebar when clicking overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close sidebar when clicking a link
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    // Mobile Menu Toggle
+    const toggler = document.getElementById('toggler');
+    const navbar = document.getElementById('navbar');
+
+    document.addEventListener('click', (e) => {
+        if (navbar && !navbar.contains(e.target) && !e.target.classList.contains('fa-bars') && toggler.checked) {
+            toggler.checked = false;
+        }
+    });
+
+    // Search functionality
+    const searchInput = document.querySelector('.search');
+    const searchIcon = document.querySelector('.search-container i');
+
+    if (searchIcon) {
+        searchIcon.addEventListener('click', () => {
+            searchInput.focus();
+        });
+    }
+});
+
 // Scroll to Top Button
 const btnUp = document.getElementById("btn_up");
 
@@ -20,9 +86,11 @@ btnUp.addEventListener("click", () => {
 
 // Header Hide on Scroll
 let lastScroll = 0;
-const header = document.querySelector('.head');
 
 window.addEventListener('scroll', () => {
+    const header = document.querySelector('.head');
+    if (!header) return;
+    
     const currentScroll = window.pageYOffset;
     
     if (currentScroll <= 0) {
@@ -44,6 +112,8 @@ let currentBanner = 0;
 const bannerSlides = document.querySelectorAll('.banner-slide');
 
 function changeBanner(direction) {
+    if (bannerSlides.length === 0) return;
+    
     bannerSlides[currentBanner].classList.remove('active');
     
     currentBanner += direction;
@@ -58,61 +128,16 @@ function changeBanner(direction) {
 }
 
 // Auto-advance banner every 5 seconds
-setInterval(() => {
-    changeBanner(1);
-}, 5000);
-
-// Mobile Menu Toggle
-const toggler = document.getElementById('toggler');
-const navbar = document.getElementById('navbar');
-
-document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target) && !e.target.classList.contains('fa-bars') && toggler.checked) {
-        toggler.checked = false;
-    }
-});
-
-// Sidebar Toggle
-const sidebarToggle = document.getElementById('sidebar-toggle');
-const sidebar = document.getElementById('sidebar');
-const sidebarOverlay = document.getElementById('sidebar-overlay');
-const sidebarClose = document.getElementById('sidebar-close');
-const sidebarLinks = document.querySelectorAll('.sidebar-link');
-
-// Open sidebar
-document.querySelector('.sidebar-trigger').addEventListener('click', () => {
-    sidebar.classList.add('active');
-    sidebarOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-// Close sidebar
-sidebarClose.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    sidebarOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-// Close sidebar when clicking overlay
-sidebarOverlay.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    sidebarOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-// Close sidebar when clicking a link
-sidebarLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        sidebar.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-});
+if (bannerSlides.length > 0) {
+    setInterval(() => {
+        changeBanner(1);
+    }, 5000);
+}
 
 // Load More Functionality
 const loadMoreBtn = document.getElementById('load_m');
-let itemsToShow = 6;
 const allCards = document.querySelectorAll('.anime-card');
+let itemsToShow = 6;
 
 if (loadMoreBtn && allCards.length > 0) {
     // Hide cards beyond initial display
@@ -151,14 +176,6 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
-
-// Search functionality
-const searchInput = document.querySelector('.search');
-const searchIcon = document.querySelector('.search-container i');
-
-searchIcon.addEventListener('click', () => {
-    searchInput.focus();
-});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
