@@ -1,158 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T&T's AniMotion - Guest Account</title>
+    <title>Guest Profile - T&T's AniMotion</title>
     <link rel="icon" href="img/T&T_Flav.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/series.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: url('img/animotionbg.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="css/account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-
-
 <body>
-
+    <!-- Back to Top Button -->
     <button type="button" class="btn_up" id="btn_up">
         <i class="fa-solid fa-circle-up"></i>
     </button>
 
-    <!-- header starts -->
-    <header class="head">
-        <input type="checkbox" id="toggler">
-        <label for="toggler" class="fas fa-bars"></label>
-
-        <a href="#" class="logo">
-            <img src="img/animotionhdr1.png" alt="T&T's AniMotion Logo">
-        </a>
-
-        <!-- Navbar links -->
-        <nav class="navbar" id="navbar">
-            <a href="index.html">Home<span></span></a>
-            <a href="series.html">Series<span></span></a>
-            <a href="movies.html">Movies<span></span></a>
-            <a href="contact.html">Contact Us<span></span></a>
-        </nav>
-
-        <!-- Search bar container -->
-        <div class="header-extras">
-            <!-- Search bar -->
-            <div class="search-container">
-                <input type="text" placeholder="Search..." class="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <!-- Account button with hover dropdown -->
-            <div class="account-container">
-                <a class="account-btn">
-                    <i class="bi bi-person-circle"></i>
-                </a>
-                <div class="account-dropdown">
-                    <a href="account.html">Account</a>
-                    <a href="index-login.html">Log Out</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Navbar will be loaded here by navbar.js -->
 
     <!-- Account Profile Section -->
-    <section class="content2">
-        <div class="sub_con2">
-            <div class="head2">
-                <h1 class="page_title">
-                    <i class="bi bi-person-circle icon-large"></i> Guest
-                </h1>
-                <p class="joined-date"
-                    style="font-size: 1.2rem; color: var(--joined-text-color); margin-top: 10px; padding-left: 10px; border-bottom: 1px solid var(--joined-border-color); padding-bottom: 5px;">
-                    <strong>Joined date: December 25, 2025</strong>
-                </p>
-                <textarea class="bio-input" placeholder="Type your bio here..."></textarea>
+    <section class="account-wrapper">
+        <div class="account-container">
+            <!-- Profile Header Card -->
+            <div class="profile-header">
+                <div class="profile-avatar-section">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-icon">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">Guest</h1>
+                        <p class="joined-date">
+                            <i class="bi bi-calendar-check"></i>
+                            Member since December 25, 2025
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-value">0</p>
+                            <p class="stat-label">Total Anime</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-value">0.0</p>
+                            <p class="stat-label">Days Watched</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-value">0.00</p>
+                            <p class="stat-label">Average Score</p>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Stats Section -->
-                <div class="stats">
-                    <div class="stat-item">
-                        <p>Total Anime</p>
-                        <p>0</p>
+                <!-- Bio Section -->
+                <div class="bio-section">
+                    <div class="bio-header">
+                        <i class="fas fa-pen"></i>
+                        <span>About Me</span>
                     </div>
-                    <div class="stat-item">
-                        <p>Days Watched</p>
-                        <p>0.0</p>
-                    </div>
-                    <div class="stat-item">
-                        <p>Average Score</p>
-                        <p>0.00</p>
-                    </div>
+                    <textarea class="bio-input" placeholder="Tell us about yourself... What anime are you watching? What are your favorites?"></textarea>
+                    <button class="save-bio-btn">
+                        <i class="fas fa-save"></i>
+                        Save Bio
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="popular2">
-            <div class="tabs">
-                <div class="tab2" id="watching-tab">
-                    <h3 class="pop2">Watching</h3>
+
+            <!-- Anime List Section -->
+            <div class="anime-list-section">
+                <div class="section-title">
+                    <i class="fas fa-list"></i>
+                    <h2>My Anime List</h2>
                 </div>
-                <div class="tab2" id="planning-tab">
-                    <h3 class="pop2">Planning</h3>
+
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="watching">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watching</span>
+                        <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-tab="planning">
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>Planning</span>
+                        <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-tab="completed">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Completed</span>
+                        <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-tab="rewatching">
+                        <i class="fas fa-redo"></i>
+                        <span>Re-watching</span>
+                        <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-tab="paused">
+                        <i class="fas fa-pause-circle"></i>
+                        <span>Paused</span>
+                        <span class="tab-count">0</span>
+                    </button>
+                    <button class="tab-btn" data-tab="dropped">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Dropped</span>
+                        <span class="tab-count">0</span>
+                    </button>
                 </div>
-                <div class="tab2" id="completed-tab">
-                    <h3 class="pop2">Completed</h3>
-                </div>
-                <div class="tab2" id="re-watching-tab">
-                    <h3 class="pop2">Re-watching</h3>
-                </div>
-                <div class="tab2" id="paused-tab">
-                    <h3 class="pop2">Paused</h3>
-                </div>
-                <div class="tab2" id="dropped-tab">
-                    <h3 class="pop2">Dropped</h3>
+
+                <!-- Tab Content -->
+                <div class="tab-content-wrapper">
+                    <div class="tab-content active" id="watching-content">
+                        <div class="empty-state">
+                            <i class="fas fa-tv"></i>
+                            <h3>No anime in this list yet</h3>
+                            <p>Start adding anime to track your watching progress!</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="planning-content">
+                        <div class="empty-state">
+                            <i class="fas fa-calendar-plus"></i>
+                            <h3>Planning list is empty</h3>
+                            <p>Add anime you're planning to watch here.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="completed-content">
+                        <div class="empty-state">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>No completed anime yet</h3>
+                            <p>Anime you've finished will appear here.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="rewatching-content">
+                        <div class="empty-state">
+                            <i class="fas fa-redo"></i>
+                            <h3>Not re-watching anything</h3>
+                            <p>Re-watching your favorites? Track them here.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="paused-content">
+                        <div class="empty-state">
+                            <i class="fas fa-pause-circle"></i>
+                            <h3>No paused anime</h3>
+                            <p>Anime you've temporarily stopped watching will show here.</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="dropped-content">
+                        <div class="empty-state">
+                            <i class="fas fa-times-circle"></i>
+                            <h3>No dropped anime</h3>
+                            <p>Anime you've decided not to continue will appear here.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <!-- JavaScript -->
-    <script>
-        // Add event listeners to all the tabs
-        const tabs = document.querySelectorAll('.tab2');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function () {
-                // Remove "selected" class from all tabs
-                tabs.forEach(t => t.classList.remove('selected'));
-
-                // Add "selected" class to the clicked tab
-                tab.classList.add('selected');
-            });
-        });
-    </script>
-
 
     <!-- Footer -->
-    <section class="footer">
-        <div class="credit">© Copyright 2024 | T&T's AniMotion
-            <div>
-                <div class="icons">
-                    <a href="https://github.com/source8marie/AniMotions" class="fa-brands fa-github"
-                        target="_blank"></a>
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© Copyright 2024 | T&T's AniMotion</p>
+            <div class="footer-links">
+                <a href="https://github.com/source8marie/AniMotions" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
             </div>
         </div>
-    </section>
+    </footer>
 
+    <script src="js/navbar.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/series.js"></script>
-</body>
+    <script>
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
 
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Show corresponding content
+                const tabName = button.getAttribute('data-tab');
+                const targetContent = document.getElementById(`${tabName}-content`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        // Bio save button functionality (placeholder)
+        const saveBioBtn = document.querySelector('.save-bio-btn');
+        const bioInput = document.querySelector('.bio-input');
+
+        saveBioBtn.addEventListener('click', () => {
+            saveBioBtn.innerHTML = '<i class="fas fa-check"></i> Saved!';
+            saveBioBtn.style.background = '#22c55e';
+            
+            setTimeout(() => {
+                saveBioBtn.innerHTML = '<i class="fas fa-save"></i> Save Bio';
+                saveBioBtn.style.background = '';
+            }, 2000);
+        });
+    </script>
+</body>
 </html>

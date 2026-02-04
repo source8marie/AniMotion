@@ -20,10 +20,10 @@ function loadNavbar() {
             <label for="toggler" class="fas fa-bars"></label>
 
             <nav class="navbar" id="navbar">
-                <a href="index.html" class="active">Home <span class="on"></span></a>
-                <a href="series.html">Series<span></span></a>
-                <a href="movies.html">Movies<span></span></a>
-                <a href="contact.html">Contact Us<span></span></a>
+                <a href="index.html" data-page="index.html">Home <span></span></a>
+                <a href="series.html" data-page="series.html">Series<span></span></a>
+                <a href="movies.html" data-page="movies.html">Movies<span></span></a>
+                <a href="contact.html" data-page="contact.html">Contact Us<span></span></a>
             </nav>
 
             <div class="header-extras">
@@ -81,6 +81,28 @@ function loadNavbar() {
     `;
     
     document.body.insertAdjacentHTML('afterbegin', navbarHTML);
+    
+    // Set active page after navbar is loaded
+    setTimeout(() => {
+        setActivePage();
+    }, 0);
+}
+
+// Set active nav link based on current page
+function setActivePage() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.navbar a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+            link.querySelector('span').classList.add('on');
+        } else {
+            link.classList.remove('active');
+            link.querySelector('span').classList.remove('on');
+        }
+    });
 }
 
 // Call this when page loads
