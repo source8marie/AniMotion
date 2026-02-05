@@ -321,6 +321,8 @@ header.hidden {
     padding: 3rem 2rem;
     overflow-y: auto;
     transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar.active {
@@ -354,7 +356,6 @@ header.hidden {
 
 .sidebar-close:hover {
     color: var(--accent-pink);
-    transform: rotate(90deg);
 }
 
 .sidebar-nav {
@@ -388,6 +389,28 @@ header.hidden {
 }
 
 .sidebar-link:hover i {
+    color: var(--text-light);
+}
+
+/* Sidebar divider */
+.sidebar-divider {
+    margin: 2rem 0;
+    height: 1px;
+    background: var(--glass-border);
+}
+
+/* Sidebar footer */
+.sidebar-footer {
+    margin-top: auto;
+}
+
+/* Active state for sidebar links */
+.sidebar-link.active {
+    background: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+.sidebar-link.active i {
     color: var(--text-light);
 }
 

@@ -16,16 +16,6 @@ function loadNavbar() {
                 </a>
             </div>
 
-            <input type="checkbox" id="toggler">
-            <label for="toggler" class="fas fa-bars"></label>
-
-            <nav class="navbar" id="navbar">
-                <a href="index.html" data-page="index.html">Home <span></span></a>
-                <a href="series.html" data-page="series.html">Series<span></span></a>
-                <a href="movies.html" data-page="movies.html">Movies<span></span></a>
-                <a href="contact.html" data-page="contact.html">Contact Us<span></span></a>
-            </nav>
-
             <div class="header-extras">
                 <div class="search-container">
                     <input type="text" placeholder="Search anime..." class="search">
@@ -37,15 +27,15 @@ function loadNavbar() {
                         <i class="bi bi-person-circle"></i>
                     </a>
                     <div class="account-dropdown">
-                    <a href="account.html">
-                        <i class="bi bi-person-circle"></i>
-                        <span>Account</span>
-                    </a>
-                    <a href="index-login.html">
-                        <i class="bi bi-box-arrow-right"></i>
-                        <span>Log Out</span>
-                    </a>
-                </div>
+                        <a href="account.html">
+                            <i class="bi bi-person-circle"></i>
+                            <span>Account</span>
+                        </a>
+                        <a href="index-login.html">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Log Out</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -54,29 +44,37 @@ function loadNavbar() {
         <div class="sidebar-overlay" id="sidebar-overlay"></div>
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>Quick Navigation</h2>
+                <h2>Navigation</h2>
                 <button class="sidebar-close" id="sidebar-close">
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-chevron-left"></i>
                 </button>
             </div>
             <nav class="sidebar-nav">
-                <a href="#new-episodes" class="sidebar-link">
-                    <i class="fas fa-play-circle"></i>
-                    <span>New Episodes</span>
+                <a href="index.html" class="sidebar-link" data-page="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
                 </a>
-                <a href="#most-watched" class="sidebar-link">
-                    <i class="fas fa-fire"></i>
-                    <span>Most Watched Anime</span>
+                <a href="series.html" class="sidebar-link" data-page="series.html">
+                    <i class="fas fa-tv"></i>
+                    <span>Series</span>
                 </a>
-                <a href="#popular-anime" class="sidebar-link">
-                    <i class="fas fa-star"></i>
-                    <span>Popular Anime</span>
+                <a href="movies.html" class="sidebar-link" data-page="movies.html">
+                    <i class="fas fa-film"></i>
+                    <span>Movies</span>
                 </a>
-                <a href="#popular-genres" class="sidebar-link">
-                    <i class="fas fa-th-large"></i>
-                    <span>Popular Genres</span>
+                <a href="contact.html" class="sidebar-link" data-page="contact.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Us</span>
                 </a>
             </nav>
+            
+            <div class="sidebar-footer">
+                <div class="sidebar-divider"></div>
+                <a href="account.html" class="sidebar-link">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Account</span>
+                </a>
+            </div>
         </aside>
     `;
     
@@ -84,23 +82,21 @@ function loadNavbar() {
     
     // Set active page after navbar is loaded
     setTimeout(() => {
-        setActivePage();
+        setActiveSidebarLink();
     }, 0);
 }
 
-// Set active nav link based on current page
-function setActivePage() {
+// Set active sidebar link based on current page
+function setActiveSidebarLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.navbar a');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
     
-    navLinks.forEach(link => {
+    sidebarLinks.forEach(link => {
         const linkPage = link.getAttribute('data-page');
         if (linkPage === currentPage) {
             link.classList.add('active');
-            link.querySelector('span').classList.add('on');
         } else {
             link.classList.remove('active');
-            link.querySelector('span').classList.remove('on');
         }
     });
 }
