@@ -109,8 +109,8 @@ Get in touch with:
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/animotion.git
-   cd animotion
+   git clone https://github.com/source8marie/AniMotions.git
+   cd AniMotions
 ```
 
 2. **Open in browser**
@@ -180,7 +180,7 @@ Get in touch with:
 
 ## 📁 Project Structure
 ```
-animotion/
+AniMotions/
 ├── index.html              # Home page
 ├── index-login.html        # Login page
 ├── series.html             # Series page
@@ -209,16 +209,16 @@ animotion/
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/yourusername">
-        <img src="https://github.com/yourusername.png" width="100px;" alt="Thomas Joseph Almorin"/><br />
+      <a href="https://github.com/tjyalmorin">
+        <img src="https://github.com/tjyalmorin.png" width="100px;" alt="Thomas Joseph Almorin"/><br />
         <sub><b>Thomas Joseph Almorin</b></sub>
       </a><br />
       <sub>Developer</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/partnerusername">
-        <img src="https://github.com/partnerusername.png" width="100px;" alt="Trisha Mae Dumagsa"/><br />
-        <sub><b>Trisha Mae Dumagsa</b></sub>
+      <a href="https://github.com/source8marie">
+        <img src="https://github.com/source8marie.png" width="100px;" alt="Trisha Marie Dumagsa"/><br />
+        <sub><b>Trisha Marie Dumagsa</b></sub>
       </a><br />
       <sub>Developer</sub>
     </td>
@@ -257,10 +257,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **T&T's AniMotion Team**
-- Thomas Joseph Almorin - [GitHub](https://github.com/yourusername)
-- Trisha Mae Dumagsa - [GitHub](https://github.com/partnerusername)
+- Thomas Joseph Almorin - [@tjyalmorin](https://github.com/tjyalmorin)
+- Trisha Marie Dumagsa - [@source8marie](https://github.com/source8marie)
 
-Project Link: [https://github.com/yourusername/animotion](https://github.com/yourusername/animotion)
+Project Link: [https://github.com/source8marie/AniMotions](https://github.com/source8marie/AniMotions)
 
 ---
 
