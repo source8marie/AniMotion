@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* Account Page Wrapper */
+.account-wrapper {
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+}
+
+.account-container {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Profile Header Card */
+.profile-header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 40rem;
+    height: 40rem;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+    animation: floatPulse 8s ease-in-out infinite;
+}
+
+@keyframes floatPulse {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-2rem, 2rem) scale(1.1); }
+}
+
+/* Profile Avatar Section */
+.profile-avatar-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    flex-shrink: 0;
+}
+
+.avatar-icon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-icon i {
+    font-size: 7.5rem;
+    color: var(--text-light);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.joined-date {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    color: var(--text-gray);
+}
+
+.joined-date i {
+    color: #ffffff;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.2rem;
+    padding: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background: var(--primary-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-icon i {
+    font-size: 2.2rem;
+    color: var(--text-light);
+}
+
+.stat-content {
+    position: relative;
+    z-index: 1;
+}
+
+.stat-value {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Bio Section */
+.bio-section {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.2rem;
+    padding: 2rem;
+}
+
+.bio-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.bio-header i {
+    color: var(--primary-purple);
+    font-size: 1.8rem;
+}
+
+.bio-input {
+    width: 100%;
+    min-height: 10rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    color: var(--text-light);
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    transition: all 0.3s ease;
+    margin-bottom: 1.2rem;
+}
+
+.bio-input:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.bio-input::placeholder {
+    color: var(--text-gray);
+}
+
+.save-bio-btn {
+    padding: 1.2rem 3rem;
+    background: var(--primary-purple);
+    color: var(--text-light);
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.save-bio-btn:hover {
+    background: var(--accent-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+}
+
+.save-bio-btn i {
+    font-size: 1.6rem;
+}
+
+/* Anime List Section */
+.anime-list-section {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 2.5rem 3rem;
+    min-height: 40rem;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.section-title i {
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+
+.section-title h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.tab-btn {
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    color: var(--text-gray);
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-btn:hover {
+    border-color: var(--primary-purple);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    background: var(--primary-purple);
+    border-color: transparent;
+    color: var(--text-light);
+}
+
+.tab-btn i {
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tab-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.tab-count {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.tab-btn.active .tab-count {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tab Content */
+.tab-content-wrapper {
+    position: relative;
+    min-height: 25rem;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Empty State */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.empty-state i {
+    font-size: 6rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    opacity: 0.5;
+}
+
+.empty-state h3 {
+    font-size: 2rem;
+    color: var(--text-light);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.empty-state p {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+    max-width: 45rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-avatar-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .account-wrapper {
+        padding-top: 8rem;
+    }
+
+    .profile-header,
+    .anime-list-section {
+        padding: 3rem 2rem;
+        border-radius: 2rem;
+    }
+
+    .avatar-wrapper {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .avatar-icon i {
+        font-size: 12rem;
+    }
+
+    .profile-name {
+        font-size: 3rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.4rem;
+    }
+
+    .tab-navigation {
+        gap: 1rem;
+    }
+
+    .tab-btn {
+        padding: 1rem 1.8rem;
+        font-size: 1.3rem;
+    }
+
+    .tab-btn i {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-header,
+    .anime-list-section {
+        padding: 2.5rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .profile-name {
+        font-size: 2.5rem;
+    }
+
+    .joined-date {
+        font-size: 1.3rem;
+    }
+
+    .avatar-wrapper {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .avatar-icon i {
+        font-size: 10rem;
+    }
+
+    .stat-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .stat-icon i {
+        font-size: 2.4rem;
+    }
+
+    .stat-value {
+        font-size: 2.6rem;
+    }
+
+    .section-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .section-title i {
+        font-size: 2.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .tab-btn span:not(.tab-count) {
+        display: none;
+    }
+
+    .tab-btn {
+        flex: 1;
+        justify-content: center;
+        min-width: 0;
+        padding: 1rem 1.2rem;
+    }
+
+    .tab-btn i {
+        margin: 0;
+    }
+
+    .empty-state {
+        padding: 4rem 1rem;
+    }
+
+    .empty-state i {
+        font-size: 6rem;
+    }
+
+    .empty-state h3 {
+        font-size: 2rem;
+    }
+
+    .empty-state p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Staggered animation for stat cards */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

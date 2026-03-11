@@ -1,35 +1,62 @@
-/* General styles for centering the button */
+/* ============================================
+   SPIN THE WHEEL - COMPLETE STYLES
+   Fortune Wheel Design with Solid Purple Button
+   ============================================ */
+
+/* Spin the Wheel Section */
+.wheel-section {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Wrapper */
 .wheel-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    margin: 0;
     width: 100%;
 }
 
+/* Main Trigger Button - Solid Purple with Pink Hover */
 .wheel-trigger-button {
-    background: linear-gradient(90deg, #6a0572, #a4508b);
+    background: #8b5cf6;
     color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 1.5rem 4rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
     transition: all 0.3s ease;
     text-align: center;
     font-size: 2rem;
-    box-shadow: 0 0 15px rgba(164, 80, 139, 0.6);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
     cursor: pointer;
-    width: 350px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
 }
 
-/* Hover effect for the button */
+.wheel-trigger-button i {
+    font-size: 2.5rem;
+    animation: spin-wheel-icon 3s linear infinite;
+}
+
+@keyframes spin-wheel-icon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .wheel-trigger-button:hover {
-    background: linear-gradient(90deg, #a4508b, #ff007f);
-    box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
-    transform: scale(1.1);
+    background: #ec4899;
+    box-shadow: 0 12px 35px rgba(236, 72, 153, 0.6);
+    transform: translateY(-3px) scale(1.05);
 }
 
-/* Modal styles */
+/* Modal Overlay */
 .wheel-modal {
     display: none;
     position: fixed;
@@ -37,236 +64,298 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
     justify-content: center;
     align-items: center;
 }
 
+/* Modal Content Box */
 .wheel-modal-content {
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 650px;
     text-align: center;
     position: relative;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
 }
 
+.wheel-modal-content h2 {
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Close Button */
 .wheel-close-button {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
+    top: 15px;
+    right: 25px;
+    font-size: 4rem;
     cursor: pointer;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.153);
+    color: #fff;
+    background: none;
+    border: none;
+    transition: color 0.3s ease;
+    line-height: 1;
+    z-index: 10;
 }
 
-/* Wheel container */
+.wheel-close-button:hover {
+    color: #ec4899;
+}
+
+/* Wheel Container */
 .wheel-container {
     position: relative;
-    margin: 20px auto;
-    width: 70vw; /* Increased size for better visibility */
-    height: 70vw; /* Increased size for better visibility */
-    max-width: 700px; /* Max width for better control */
-    max-height: 700px; /* Max height for better control */
+    margin: 2rem auto;
+    width: 40rem;
+    height: 40rem;
+    max-width: 400px;
+    max-height: 400px;
 }
 
-canvas {
-    border: 5px solid #333;
+/* Canvas */
+#wheel {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    background-color: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Arrow pointing to the wheel */
+/* Arrow Pointer - Styled like the reference image */
 .wheel-arrow {
     position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%) rotate(180deg);
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 40px solid gold;
-    filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
-    transition: filter 0.3s ease-in-out;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid #cbd5e1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    z-index: 10;
 }
 
+/* Result Text */
 .anime-result-text {
     position: absolute;
     top: 50%;
-    left: 51%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: bold;
-    color: #9b4dca;
-    background: linear-gradient(45deg, #efefef, #c7c7c7);
-    padding: 10px 20px;
-    border-radius: 30px;
-    box-shadow: 0 0 15px rgba(158, 0, 255, 0.8);
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8),
+                0 0 50px rgba(236, 72, 153, 0.6);
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-/* Animation for the falling effect */
+.anime-result-text:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 1),
+                0 0 60px rgba(236, 72, 153, 0.8);
+    background: linear-gradient(135deg, #a78bfa, #f472b6);
+}
+
+/* Falling Animation */
 .falling-animation {
-    animation: fall 0.5s ease-in-out forwards;
+    animation: fall 0.6s ease-out forwards;
 }
 
-/* Keyframe for the falling effect */
 @keyframes fall {
     0% {
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -150%);
         opacity: 0;
+        scale: 0.5;
     }
-
+    50% {
+        transform: translate(-50%, -40%);
+        opacity: 1;
+        scale: 1.1;
+    }
     100% {
         transform: translate(-50%, -50%);
         opacity: 1;
+        scale: 1;
     }
 }
 
-/* Spin button inside modal */
-.wheel-spin-button {
-    padding: 10px 20px;
-    font-size: 16px;
+/* Spin Button */
+.wheel-spin-button,
+#spinButton {
+    padding: 1.5rem 4rem !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    margin-top: 2rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.5) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.wheel-spin-button:hover,
+#spinButton:hover {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 35px rgba(236, 72, 153, 0.7) !important;
+}
+
+.wheel-spin-button:active,
+#spinButton:active {
+    transform: translateY(-1px) !important;
+}
+
+/* Result Message */
+#result {
     color: #fff;
-    background: linear-gradient(90deg, #6a0572, #a4508b);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 20px;
-    box-shadow: 0 0 15px rgba(164, 80, 139, 0.6);
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 0 2px 10px rgba(139, 92, 246, 0.5);
 }
 
-.wheel-spin-button:hover {
-    background: linear-gradient(90deg, #a4508b, #ff007f);
-    box-shadow: 0 0 25px rgba(255, 0, 127, 0.8);
-}
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
 
-/* Media Queries for responsiveness */
-
-/* Mobile styles */
+/* Mobile */
 @media screen and (max-width: 767px) {
-    .wheel-wrapper {
-        flex-direction: column;
-        margin: 10px 0;
+    .wheel-section {
+        padding: 3rem 3%;
     }
 
     .wheel-trigger-button {
         width: 90%;
-        font-size: 1.5rem;
-        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        padding: 1.2rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .wheel-trigger-button i {
+        font-size: 2rem;
     }
 
     .wheel-modal-content {
-        width: 90%;
-        max-width: 90%;
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    .wheel-modal-content h2 {
+        font-size: 2.2rem !important;
     }
 
     .wheel-container {
-        width: 80vw; /* 80% of the viewport width */
-        height: 80vw; /* 80% of the viewport height */
-        max-width: 400px; /* Increased size */
-        max-height: 400px; /* Increased size */
+        width: 35rem;
+        height: 35rem;
+        max-width: 350px;
+        max-height: 350px;
+        margin: 1rem auto;
     }
 
-    #wheel {
-        width: 100%;
-        height: 100%;
+    .wheel-arrow {
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 35px solid #cbd5e1;
     }
 
     .anime-result-text {
-        font-size: 20px;
-        padding: 8px 16px;
+        font-size: 1.8rem;
+        padding: 1.2rem 2rem;
     }
 
-    .wheel-spin-button {
-        padding: 8px 16px;
-        font-size: 14px;
+    .wheel-spin-button,
+    #spinButton {
+        padding: 1.2rem 2.5rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    #result {
+        font-size: 1.6rem;
+    }
+
+    .wheel-close-button {
+        font-size: 3.5rem;
+        right: 15px;
+        top: 10px;
     }
 }
 
-/* Tablet styles */
-@media screen and (max-width: 1024px) {
-    .wheel-wrapper {
-        flex-direction: column;
-        margin: 15px 0;
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .wheel-modal-content {
+        width: 85%;
+        padding: 2.5rem;
     }
 
-    .wheel-trigger-button {
-        width: 70%;
+    .wheel-modal-content h2 {
+        font-size: 2.6rem !important;
+    }
+
+    .wheel-container {
+        width: 45rem;
+        height: 45rem;
+        max-width: 450px;
+        max-height: 450px;
+    }
+
+    .wheel-arrow {
+        border-left: 22px solid transparent;
+        border-right: 22px solid transparent;
+        border-top: 45px solid #cbd5e1;
+    }
+
+    .anime-result-text {
+        font-size: 2.2rem;
+        padding: 1.4rem 2.5rem;
+    }
+
+    .wheel-spin-button,
+    #spinButton {
+        padding: 1.4rem 3.5rem !important;
+        font-size: 1.7rem !important;
+    }
+
+    #result {
         font-size: 1.8rem;
-        padding: 1rem 2.5rem;
     }
+}
 
+/* Desktop */
+@media screen and (min-width: 1025px) {
     .wheel-modal-content {
         width: 80%;
-        max-width: 80%;
+        max-width: 650px;
     }
 
     .wheel-container {
-        width: 75vw; /* 75% of the viewport width */
-        height: 75vw; /* 75% of the viewport height */
-        max-width: 600px; /* Increased size */
-        max-height: 600px; /* Increased size */
-    }
-
-    #wheel {
-        width: 100%;
-        height: 100%;
-    }
-
-    .anime-result-text {
-        font-size: 22px;
-        padding: 10px 18px;
-    }
-
-    .wheel-spin-button {
-        padding: 9px 18px;
-        font-size: 15px;
-    }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 1025px) {
-    .wheel-wrapper {
-        margin: 20px auto;
-    }
-
-    .wheel-trigger-button {
-        width: 350px;
-        font-size: 2rem;
-        padding: 1rem 2.5rem;
-    }
-
-    .wheel-modal-content {
-        width: 50%;
-        max-width: 600px;
-    }
-
-    .wheel-container {
-        width: 40vw; /* 40% of the viewport width */
-        height: 40vw; /* 40% of the viewport height */
-        max-width: 500px; /* Max width for desktop */
-        max-height: 500px; /* Max height for desktop */
-    }
-
-    #wheel {
-        width: 100%;
-        height: 100%;
-    }
-
-    .anime-result-text {
-        font-size: 24px;
-        padding: 12px 20px;
-    }
-
-    .wheel-spin-button {
-        padding: 10px 20px;
-        font-size: 16px;
+        width: 40rem;
+        height: 40rem;
+        max-width: 400px;
+        max-height: 400px;
     }
 }

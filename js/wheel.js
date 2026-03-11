@@ -1,3 +1,6 @@
+// Spin the Wheel JavaScript
+// Fortune Wheel Design with Icons
+
 // Define variables
 const openWheelButton = document.getElementById("openWheelButton");
 const wheelModal = document.getElementById("wheelModal");
@@ -7,6 +10,9 @@ const resultDisplay = document.getElementById("result");
 
 const canvas = document.getElementById("wheel");
 const ctx = canvas.getContext("2d");
+const centerX = 200;
+const centerY = 200;
+const radius = 180;
 
 const segments = [
   "Naruto",
@@ -20,20 +26,34 @@ const segments = [
   "Death Note",
 ];
 
+// Emojis for each anime
+const segmentEmojis = [
+  "🍜", // Naruto
+  "⚓", // One Piece
+  "⚔️", // Attack on Titan
+  "💥", // My Hero Academia
+  "👹", // Demon Slayer
+  "👻", // Jujutsu Kaisen
+  "🏍️", // Tokyo Revengers
+  "🎯", // Hunter x Hunter
+  "📓", // Death Note
+];
+
+// Updated colors to match fortune wheel design (alternating purple and blue)
 const segmentColors = [
-  "#4c0bb2",
-  "#8d35f3",
-  "#cb19f3",
-  "#4c0bb2",
-  "#8d35f3",
-  "#cb19f3",
-  "#4c0bb2",
-  "#8d35f3",
-  "#cb19f3",
+  "#5b4fc7", // Purple
+  "#4a90e2", // Blue
+  "#5b4fc7", // Purple
+  "#4a90e2", // Blue
+  "#5b4fc7", // Purple
+  "#4a90e2", // Blue
+  "#5b4fc7", // Purple
+  "#4a90e2", // Blue
+  "#5b4fc7", // Purple
 ];
 
 let startAngle = 0;
-let arc = Math.PI * 2 / segments.length;  // Evenly divide the circle
+let arc = Math.PI * 2 / segments.length;
 let spinAngleStart = 0;
 let spinTime = 0;
 let spinTimeTotal = 0;
@@ -41,126 +61,122 @@ let spinTimeTotal = 0;
 // Open modal
 openWheelButton.addEventListener("click", () => {
   wheelModal.style.display = "flex";
+  drawWheel();
 });
 
 // Close modal
 closeModal.addEventListener("click", () => {
   wheelModal.style.display = "none";
   resultDisplay.textContent = "";
+  clearPreviousResult();
+});
+
+// Close on outside click
+wheelModal.addEventListener("click", (e) => {
+  if (e.target === wheelModal) {
+    wheelModal.style.display = "none";
+    resultDisplay.textContent = "";
+    clearPreviousResult();
+  }
 });
 
 function drawWheel() {
-  // Clear canvas before drawing the wheel
+  // Clear canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw segments
   for (let i = 0; i < segments.length; i++) {
     const angle = startAngle + i * arc;
+    
+    // Draw segment
     ctx.fillStyle = segmentColors[i];
     ctx.beginPath();
-    ctx.arc(250, 250, 250, angle, angle + arc, false);
-    ctx.lineTo(250, 250);
+    ctx.arc(centerX, centerY, radius, angle, angle + arc, false);
+    ctx.lineTo(centerX, centerY);
     ctx.fill();
 
-    // Add horizontally aligned text to each segment
+    // Add white borders between segments
+    ctx.strokeStyle = "white";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(
+      centerX + Math.cos(angle) * radius,
+      centerY + Math.sin(angle) * radius
+    );
+    ctx.stroke();
+
+    // Draw emoji icon
     ctx.save();
-    ctx.fillStyle = "white"; // Text color
-
-    // Adjust the position to bring text inward
-    const textX = 250 + Math.cos(angle + arc / 2) * 160; // Reduced distance for inward effect
-    const textY = 250 + Math.sin(angle + arc / 2) * 160;
-
-    ctx.translate(textX, textY);
-
-    // Rotate text to align with the segment, adjusting to 3 o'clock position (0 radians)
-    const rotateAngle = angle + arc / 2 + Math.PI / 2;
-
-    // Align to 3 o'clock position (0 radians)
-    const alignedToThreeOClock = rotateAngle - Math.PI / 2;  // Subtract π/2 to align with 3 o'clock
-
-    // Apply the rotation
-    ctx.rotate(alignedToThreeOClock);
-
-
-    // Set smaller font size
-    ctx.font = "bold 13px Arial";
+    const iconX = centerX + Math.cos(angle + arc / 2) * 95;
+    const iconY = centerY + Math.sin(angle + arc / 2) * 95;
+    
+    ctx.font = "35px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
+    ctx.fillText(segmentEmojis[i], iconX, iconY);
+    ctx.restore();
 
-    // Add subtle glow effect on the text
-    ctx.shadowColor = "rgba(255, 255, 255, 0.6)";
-    ctx.shadowBlur = 6;
+    // Add text at the outer edge
+    ctx.save();
+    const textX = centerX + Math.cos(angle + arc / 2) * 140;
+    const textY = centerY + Math.sin(angle + arc / 2) * 140;
 
-    ctx.fillText(segments[i], 0, 0); // Draw centered text
+    ctx.translate(textX, textY);
+    const rotateAngle = angle + arc / 2 + Math.PI / 2;
+    ctx.rotate(rotateAngle);
+
+    ctx.fillStyle = "white";
+    ctx.font = "bold 11px Poppins, Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.shadowColor = "rgba(0, 0, 0, 0.3)";
+    ctx.shadowBlur = 3;
+
+    ctx.fillText(segments[i], 0, 0);
     ctx.restore();
   }
 
-  // Draw the "Spin" circle in the center
+  // Draw center circle with gradient
   ctx.save();
   ctx.beginPath();
-  ctx.arc(250, 250, 60, 0, Math.PI * 2, false);  // Circle at the center
-  ctx.fillStyle = "#ffd700";  // Gold color
-  ctx.shadowColor = "#ffd700";  // Gold glow
-  ctx.shadowBlur = 15;  // Glow effect
+  ctx.arc(centerX, centerY, 55, 0, Math.PI * 2, false);
+  
+  const centerGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 55);
+  centerGradient.addColorStop(0, "#e0e7ff");
+  centerGradient.addColorStop(1, "#c7d2fe");
+  
+  ctx.fillStyle = centerGradient;
   ctx.fill();
 
-  // Add a shiny effect to the gold circle
-  const gradient = ctx.createRadialGradient(250, 250, 30, 250, 250, 60);
-  gradient.addColorStop(0, "rgba(255, 255, 255, 0.4)");  // Light shine at the center
-  gradient.addColorStop(1, "#ffd700");  // Gold at the edges
-  ctx.fillStyle = gradient;
-  ctx.fill();
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = "#fff";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.2)";
+  ctx.shadowBlur = 10;
+  ctx.stroke();
+  ctx.restore();
 
-  // Thicker silver border with shiny effect
+  // Draw outer border with shadow
+  ctx.save();
   ctx.lineWidth = 10;
-  ctx.strokeStyle = "#c0c0c0";  // Silver color
-  ctx.stroke();
-
-  // Add subtle shine effect on border
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = "rgba(255, 255, 0, 0.6)";
-  ctx.stroke();
-
-  ctx.restore();
-
-  // Add "Spin" text inside the circle
-  ctx.save();
-  ctx.fillStyle = "#4c0bb2";  // Updated text color to #4c0bb2
-  ctx.font = "bold 20px Arial";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText("Spin", 250, 250);
-  ctx.restore();
-
-  // Draw the outer border of the wheel with the shiny effect
-  ctx.save();
-  ctx.lineWidth = 50;  // Thicker border for the wheel
-  ctx.strokeStyle = "#f99eff";  // Outer border color (pink)
-  ctx.shadowColor = "#f99eff";  // Pink glow
-  ctx.shadowBlur = 30;  // Stronger glow effect
+  ctx.strokeStyle = "#94a3b8";
+  ctx.shadowColor = "rgba(0, 0, 0, 0.3)";
+  ctx.shadowBlur = 20;
   ctx.beginPath();
-  ctx.arc(250, 250, 250, 0, Math.PI * 2, false);  // Outer circle
-  ctx.stroke();
-
-  // Add shiny highlights to the outer border
-  ctx.lineWidth = 5;
-  ctx.strokeStyle = "rgba(255, 255, 255, 0.6)";  // White shiny effect
+  ctx.arc(centerX, centerY, 185, 0, Math.PI * 2, false);
   ctx.stroke();
   ctx.restore();
 }
 
-
-// Function to clear the previous result
 function clearPreviousResult() {
   const resultText = document.querySelector('.anime-result-text');
   if (resultText) {
-    resultText.remove(); // Remove the previous result text
+    resultText.remove();
   }
 }
 
-// Spin the wheel
 function rotateWheel() {
-  clearPreviousResult(); // Clear the previous result before starting a new spin
+  clearPreviousResult();
 
   spinTime += 30;
   if (spinTime >= spinTimeTotal) {
@@ -174,25 +190,30 @@ function rotateWheel() {
 }
 
 function stopRotateWheel() {
-  const degrees = (startAngle * 180) / Math.PI + 0;  // Adjust to account for the arrow at the top (no +90 here)
-  const arcd = (arc * 180) / Math.PI;
-  const index = Math.floor((360 - (degrees % 360)) / arcd); // Calculate which segment was selected based on rotation
-  const anime = segments[index];  // Get the selected anime
+  // The arrow points to the top 
+  let normalizedAngle = startAngle % (Math.PI * 2);
+  if (normalizedAngle < 0) normalizedAngle += Math.PI * 2;
+  
+  // We need to find which segment is at the top
+  const topAngle = (Math.PI * 3/2); 
+  
+  // Calculate the angle difference from the top
+  let angleFromTop = (topAngle - normalizedAngle) % (Math.PI * 2);
+  if (angleFromTop < 0) angleFromTop += Math.PI * 2;
+  
+  // Find which segment this angle falls into
+  const index = Math.floor(angleFromTop / arc) % segments.length;
+  const anime = segments[index];
 
-  // Set the result to be inside the wheel (text format)
-  const resultDisplay = document.getElementById("result");
-  resultDisplay.textContent = `You got: ${anime}`;
+  resultDisplay.textContent = `Your Next Anime: ${anime}!`;
 
-  // Create a new div for the anime name with shiny text and a silver background
   const resultText = document.createElement('div');
   resultText.classList.add('anime-result-text');
   resultText.textContent = anime;
 
-  // Add the result text inside the wheel container
   const wheelContainer = document.querySelector('.wheel-container');
   wheelContainer.appendChild(resultText);
 
-  // Apply a falling animation to the result text
   setTimeout(() => {
     resultText.classList.add('falling-animation');
   }, 100);
@@ -204,13 +225,11 @@ function easeOut(t, b, c, d) {
   return b + c * (tc + -3 * ts + 3 * t);
 }
 
-
-
-// Handle spin button click
+// Spin button click
 spinButton.addEventListener("click", () => {
-  spinAngleStart = Math.random() * 5000 + 2000;
+  spinAngleStart = Math.random() * 1000 + 1000; 
   spinTime = 0;
-  spinTimeTotal = Math.random() * 3000 + 4000;
+  spinTimeTotal = Math.random() * 500 + 1000; 
   rotateWheel();
 });
 
